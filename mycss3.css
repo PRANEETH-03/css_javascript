@@ -1,0 +1,1672 @@
+css grid layout 
+~~~~~~~~~~~~~~~
+<html>
+<head>
+<title>my page</title>
+<style>
+.container{
+background:pink;
+width:600px;
+
+margin-left:50px;
+display:grid;
+grid-template-columns: /*35% 200px auto*/ /*1fr 1fr 1fr*//*repeat(3, 200px)*/repeat(2 ,200px) auto;
+grid-template-rows:/*150px 150px */repeat(3, 200px);
+grid-row-gap:20px;
+grid-column-gap:10px;
+/*shorthand
+grid-gap:20px 10px;
+*/
+
+
+}
+.item1{
+background:red;
+
+grid-row-start:2;
+grid-row-end:3;
+/*shorthand
+grid-row:2/3;*/
+grid-column-start:2;
+grid-column-end:3;
+/*shorthand
+grid-column:2/3;*/
+
+/* full shorthand
+grid-area:2 / 3 / 2 / 3;
+*/
+}
+.item2{
+background:green;
+grid-row:1 / -1;
+}
+.item3{
+background:blue;
+}
+.item4{
+background:violet;
+}
+.item5{
+background:orange;
+grid-row-start:1;
+grid-row-end:2;
+grid-column-start:1;
+grid-column-end:/*3*/span 2;
+
+}
+.item6{
+background:yellow;
+
+}
+</style>
+</head>
+<body>
+<h3>grid introduction(2 dimentional grid system,css grid layout replace float layout,fast and clean code,no need of css frame works)</h3>
+ <h3>grid-template-columns,grid-template-rows</h3>
+  
+  <div class="container">
+  	<div class="item1">item1</div>
+  	<div class="item2">item2</div>
+  	<div class="item3">item3</div>
+  	<div class="item4">item4</div>
+  	<div class="item5">item5</div>
+  	<div class="item6">item6</div>
+  </div>
+</body>
+</html>
+========================================================
+grid naming
+~~~~~~~~~~~
+<html>
+<head>
+<title>my page</title>
+<style>
+.container{
+width:600px;
+height:600px;
+display:grid;
+grid-template-columns:repeat(3,[col-start] 200px[col-end]);
+grid-template-rows:[header-start]75px[header-end menu-start] 50px[menu-end box-start] 75px[box-end content-start] 200px[content-end footer-start] 100px[footer-end];
+grid-gap:10px 5px;
+text-align:center;
+}
+
+.item1{
+background:red;
+grid-row:header-start / header-end;
+grid-column:col-start 1 / col-end 3 ;
+
+}
+.item2{
+background:green;
+
+}
+.item3{
+background:blue;
+
+}
+.item4{
+background:violet;
+grid-row:menu-start / menu-end;
+grid-column:col-start 1 / col-end 3;
+}
+.item5{
+background:orange;
+grid-row:content-start / content-end;
+grid-column:col-start 1 / col-end 2;
+
+}
+.item6{
+background:yellow;
+grid-row:box-start / content-end;
+grid-column:col-start 3 /col-end 3;
+}
+.item7{
+background:skyblue;
+grid-row:footer-start  footer-end;
+grid-column:col-start 1 / col-end 3;
+}
+</style>
+
+</style>
+</head>
+<body>
+<h3>css grid</h3>
+  <div class="container">
+  	<div class="item1">heading</div>
+  	<div class="item2">box1</div>
+  	<div class="item3">box2</div>
+  	<div class="item4">menu</div>
+  	<div class="item5">content</div>
+  	<div class="item6">sidebar</div>
+  	<div class="item7">foot</div>
+  </div>
+</body>
+</html>
+
+========================================================
+grid-template-area
+~~~~~~~~~~~~~~~~~~~~
+<html>
+<head>
+<title>my page</title>
+<style>
+.container{
+width:600px;
+height:600px;
+display:grid;
+grid-template-columns:repeat(3, 200px);
+grid-template-rows:60px 75px 50px 200px 50px;
+grid-gap:10px 5px;
+text-align:center;
+grid-template-areas:"header header ."
+		"menu menu menu"
+		"box1 box2 sidebar"
+		"content content sidebar"
+		"footer footer footer";
+}
+
+.item1{
+background:red;
+grid-row:header-start / header-end;
+grid-column:col-start 1 / col-end 3 ;
+grid-area:header;
+}
+.item2{
+background:green;
+grid-area:box1;
+}
+.item3{
+background:blue;
+grid-area:box2;
+}
+.item4{
+background:violet;
+grid-row:menu-start / menu-end;
+grid-column:col-start 1 / col-end 3;
+grid-area:menu;
+}
+.item5{
+background:orange;
+grid-row:content-start / content-end;
+grid-column:col-start 1 / col-end 2;
+grid-area:content;
+}
+.item6{
+background:yellow;
+grid-row:box-start / content-end;
+grid-column:col-start 3 /col-end 3;
+grid-area:sidebar;
+}
+.item7{
+background:skyblue;
+grid-row:footer-start  footer-end;
+grid-column:col-start 1 / col-end 3;
+grid-area:footer;
+}
+</style>
+
+</style>
+</head>
+<body>
+<h3>css grid</h3>
+  <div class="container">
+  	<div class="item1">heading</div>
+  	<div class="item2">box1</div>
+  	<div class="item3">box2</div>
+  	<div class="item4">menu</div>
+  	<div class="item5">content</div>
+  	<div class="item6">sidebar</div>
+  	<div class="item7">foot</div>
+  </div>
+</body>
+</html>
+
+
+========================================================
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<title>my page</title>
+<style>
+.container{
+width:600px;
+display:grid;
+grid-template-rows:repeat(2,minmax(200px,min-content));
+grid-template-columns:repeat(3,minmax(100px,300px));;
+
+grid-gap:10px;
+}
+.item1{
+background:red;
+
+}
+.item2{
+background:green;
+
+}
+.item3{
+background:blue;
+}
+.item4{
+background:violet;
+}
+.item5{
+background:orange;
+
+
+}
+.item6{
+background:yellow;
+
+}
+</style>
+</head>
+<body>
+<h3></h3>
+  
+  <div class="container">
+  	<div class="item1">item1</div>
+  	<div class="item2">item2</div>
+  	<div class="item3">item3alhffffffffffa sdahaasasas ascaa adada asddasd ad v
+  	</div>
+  	<div class="item4">item4</div>
+  	<div class="item5">item5</div>
+  	<div class="item6">item6</div>
+  </div>
+</body>
+</html>
+</body>
+</html>
+
+========================================================
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<title>my page</title>
+<style>
+.container{
+width:600px;
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-template-rows:repeat(2,120px);
+grid-gap:10px;
+grid-auto-rows:90px;
+grid-auto-flow:column;
+
+grid-auto-columns:80px;
+}
+.item1{
+background:red;
+
+}
+.item2{
+background:green;
+
+}
+.item3{
+background:blue;
+}
+.item4{
+background:violet;
+}
+.item5{
+background:orange;
+
+
+}
+.item6{
+background:yellow;
+
+}
+</style>
+</head>
+<body>
+<h3>implicit grid</h3>
+  
+  <div class="container">
+  	<div class="item1">item1</div>
+  	<div class="item2">item2</div>
+  	<div class="item3">item3</div>
+  	<div class="item4">item4</div>
+  	<div class="item5">item5</div>
+  	<div class="item6">item6</div>
+  </div>
+</body>
+</html>
+</body>
+</html>
+
+========================================================
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<title>my page</title>
+<style>
+.container{
+width:600px;
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-template-rows:repeat(2,100px);
+grid-gap:10px;
+grid-auto-rows:90px;
+align-items:center;/*start,end,strech(default)(vertical aligning)*/
+justify-items:end;/*start,center,strech(default)(horizontal aligning)*/
+place-items:/*shorthand for align-items and justfy-items*/;
+}
+.item1{
+background:red;
+align-self:start;
+place-self:/*shorthand for align-self and justfy-self*/;
+}
+.item2{
+background:green;
+justify-self:center;
+}
+.item3{
+background:blue;
+grid-row:span 3;
+}
+.item4{
+background:violet;
+}
+.item5{
+background:orange;
+
+
+}
+.item6{
+background:yellow;
+
+}
+.item7{
+background:green;
+grid-column:span 2;
+}
+.item8{
+background:blue;
+}
+</style>
+</head>
+<body>
+<h3>implicit grid</h3>
+  
+  <div class="container">
+  	<div class="item1">item1</div>
+  	<div class="item2">item2</div>
+  	<div class="item3">item3</div>
+  	<div class="item4">item4</div>
+  	<div class="item5">item5</div>
+  	<div class="item6">item6</div>
+  	<div class="item7">item7</div>
+  	<div class="item8">item8</div>  	  	
+  </div>
+</body>
+</html>
+</body>
+</html>
+
+========================================================
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<title>my page</title>
+<style>
+.container{
+width:600px;
+height:800px;
+display:grid;
+grid-template-columns:repeat(2, 150px);
+grid-template-rows:repeat(2,100px);
+grid-gap:10px;
+grid-auto-rows:90px;
+justify-content:space-evenly;/*(horizontal alignment)start,end,strech,center,space-between,space-around*/
+align-content:space-around;/*(vertical alignment)start,end,strech,center,space-between,space-around*/
+grid-auto-flow:row dense;/*column dense,*/
+}
+.item1{
+background:red;
+
+
+}
+.item2{
+background:green;
+
+}
+.item3{
+background:blue;
+grid-row:span 3;
+}
+.item4{
+background:violet;
+}
+.item5{
+background:orange;
+
+
+}
+.item6{
+background:yellow;
+grid-column:span 2;
+}
+.item7{
+background:green;
+
+}
+.item8{
+background:blue;
+}
+</style>
+</head>
+<body>
+<h3>implicit grid</h3>
+  
+  <div class="container">
+  	<div class="item1">item1</div>
+  	<div class="item2">item2</div>
+  	<div class="item3">item3</div>
+  	<div class="item4">item4</div>
+  	<div class="item5">item5</div>
+  	<div class="item6">item6</div>
+  	<div class="item7">item7</div>
+  	<div class="item8">item8</div>  	  	
+  </div>
+</body>
+</html>
+</body>
+</html>
+
+========================================================
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<title>my page</title>
+<style>
+.container{
+width:80%;
+background:pink;
+
+display:grid;
+grid-template-columns:fit-content(200px) fit-content(300px) 1fr;/*auto-fit*/
+grid-template-rows:repeat(2, minmax(100px,min-content));
+
+}
+.item1{
+background:red;
+}
+.item2{
+background:green;
+}
+.item3{
+background:blue;
+
+}
+.item4{
+background:violet;
+grid-column-end:-1;
+}
+
+</style>
+</head>
+<body>
+<h3>auto-fill(automatically it fills the box 1 by one and leave space for other)auto-fit(same as auto-fill but here it creates column space only for those items already there....other space we cant fill it)fit-content(max width)</h3>
+  
+  <div class="container">
+  	<div class="item1">item1een the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially un</div>
+  	<div class="item2">item2tem1een the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially u</div>
+  	<div class="item3">item3</div>
+  	<div class="item4">item4</div>
+  		  	
+  </div>
+</body>
+</html>
+</body>
+</html>
+
+========================================================
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<title>my page</title>
+<style>
+.container{
+width:80%;
+background:pink;
+display:grid;
+grid-template-rows:repeat(2,200px);
+grid-template-columns:repeat(2,1fr);
+}
+.item1{
+background:red;
+order:4;
+}
+.item2{
+background:green;
+order:3;
+}
+.item3{
+background:blue;
+order:2;
+}
+.item4{
+background:violet;
+order:1;
+display:grid;
+grid-template-rows:repeat(2,1fr);
+grid-template-columns:repeat(2,1fr);
+grid-gap:10px;
+padding:5px;
+}
+.item4 >div{
+background:lightgreen;
+color:red;
+}
+</style>
+</head>
+<body>
+<h3>order,nested grids</h3>
+  
+  <div class="container">
+  	<div class="item1">item1</div>
+  	<div class="item2">item2</div>
+  	<div class="item3">item3</div>
+  	<div class="item4">
+  		<div class="item11">item1</div>
+  	<div class="item22">item2</div>
+  	<div class="item33">item3</div>
+  	</div>
+  		  	
+  </div>
+</body>
+</html>
+</body>
+</html>
+
+========================================================
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<title>my page</title>
+<style>
+.container{
+width:300px;
+background:pink;
+display:grid;
+grid-template-rows:repeat(2,120px);
+grid-template-columns:repeat(2,130px);
+}
+.items{
+width:150px;
+ 
+}
+.item1{
+background:red;
+grid-column:1/span 2;
+grid-row:1/span 2;
+align-self:start;
+z-index:3;
+}
+.item2{
+background:green;
+grid-column:1/span 2;
+grid-row:1/span 2;
+align-self:center;
+justify-self:center;
+z-index:1;
+}
+.item3{
+background:blue;
+grid-column:1/span 2;
+grid-row:1/span 2;
+align-self:end;
+justify-self:end;
+z-index:2;
+}
+
+
+</style>
+</head>
+<body>
+<h3>order,nested grids,overlapping</h3>
+  
+  <div class="container">
+  	<div class="items item1">item1 titem2 t of the printing and of the printing and typesetting industry. Lorem Ipsum has been</div>
+  	<div class="items item2">item2 item2 t of the printing andt of the printing and typesetting industry. Lorem Ipsum has been</div>
+  	<div class="items item3">item3 t of the printing and typesetting industry. Lorem Ipsum item2 t of the printing andhas been</div>
+
+  		  	
+  </div>
+</body>
+</html>
+</body>
+</html>
+
+========================================================
+css flex box
+~~~~~~~~~~
+
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+.container{
+width:300px;
+height:300px;
+border:3px solid green;
+background:pink;
+
+display:flex;
+
+/*flex-direction:column;*/
+
+/*flex-wrap:wrap-reverse;*//*(to handel overflow)*/
+/*shorthand for direction and wrap
+flex-flow:row wrap-reverse;*/
+
+/*justify-content:flex-end;*/
+
+
+
+
+align-items:baseline;
+}
+.item1{background:red;
+height:30px;}
+.item2{background:orange;
+height:60px;}
+.item3{background:green;
+height:200px;}
+.item4{background:blue;
+height:100px;}
+.item5{background:violet;
+height:20px;}
+
+
+
+
+
+</style>
+</head>
+<body>
+<h3>flex(-direction(row,row-reverse,column,column-reverse),-wrap(nowrap,wrap,wrap-reverse),-flow,-grow,-shrink,-basis,-flex,justify-content(flex-start,flex-end,center,space-around,space-between,space-evenly),align-content(flex-start,flex-end,center,space-around,space-between,space-evenly),align-items(flex-start,flex-end,strech,baseline,center),align-self,order)</h3>
+<div class="container">
+<div class="item1">item1</div>
+<div class="item2">item2</div>
+<div class="item3">item3</div>
+<div class="item4">item4</div>
+<div class="item5">item5</div>
+</div>
+</body>
+</html>
+====================================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+.container{
+width:40%;
+height:100px;
+border:3px solid green;
+background:pink;
+padding:10px;
+display:flex;
+
+flex-wrap:wrap;
+
+/*align-content:space-evenly;*/
+justify-content:space-between;
+
+
+
+}
+.item1{background:red;
+/*align-self:baseline;*/
+order:3;
+flex-basis:200px;
+}
+.item2{background:orange;
+order:-2;
+}
+.item3{background:green;
+order:-1;
+}
+.item4{background:blue;
+order:1;
+}
+.item5{background:violet;
+order:2;
+/*flex-grow:2;*/
+}
+
+.items{
+flex-grow:1;
+flex-basis:100px;
+}
+
+</style>
+</head>
+<body>
+<h3>flex(-direction(row,row-reverse,column,column-reverse),-wrap(nowrap,wrap,wrap-reverse),-flow,-grow(numbers),-shrink,-basis(handel width),-flex,justify-content(flex-start,flex-end,center,space-around,space-between,space-evenly),align-content(flex-start,flex-end,center,space-around,space-between,space-evenly),align-items(flex-start,flex-end,strech,baseline,center),align-self(auto,flex-start,flex-end,center,strech,baseline),order)</h3>
+<div class="container">
+<div class="items item1">item1</div>
+<div class="items item2">item2</div>
+<div class="items item3">item3</div>
+<div class="items item4">item4</div>
+<div class="items item5">item5</div>
+</div>
+</body>
+</html>
+
+====================================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+.container{
+width:100%;
+height:40px;
+border:3px solid green;
+background:pink;
+padding:10px;
+display:flex;
+
+
+
+/*align-content:space-evenly;*/
+
+
+
+
+}
+.item1{background:red;
+/*align-self:baseline;*/
+order:3;
+flex-grow:1;
+}
+.item2{background:orange;
+order:-2;
+flex-shrink:2  ;
+flex-basis:300px;
+/*shorthand
+flex:grow shrink basis;*/
+
+}
+.item3{background:green;
+order:-1;
+}
+.item4{background:blue;
+order:1;
+}
+.item5{background:violet;
+order:2;
+/*flex-grow:2;*/
+}
+
+.items{
+width:100px;
+margin:auto;
+}
+
+</style>
+</head>
+<body>
+<h3>flex(-direction(row,row-reverse,column,column-reverse),-wrap(nowrap,wrap,wrap-reverse),-flow,-grow(numbers),-shrink(),-basis(handel width),-flex,justify-content(flex-start,flex-end,center,space-around,space-between,space-evenly),align-content(flex-start,flex-end,center,space-around,space-between,space-evenly),align-items(flex-start,flex-end,strech,baseline,center),align-self(auto,flex-start,flex-end,center,strech,baseline),order)</h3>
+<div class="container">
+<div class="items item1">item1</div>
+<div class="items item2">item2</div>
+<div class="items item3">item3</div>
+<div class="items item4">item4</div>
+<div class="items item5">item5</div>
+</div>
+</body>
+</html>
+
+====================================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+.container{
+width:500px;
+height:400px;
+border:3px solid green;
+background:pink;
+padding:10px;
+display:flex;
+}
+.item1{background:red;
+}
+
+.items{
+width:100px;
+margin-top:auto;
+margin-left:auto;
+}
+
+</style>
+</head>
+<body>
+<h3>flex(-direction(row,row-reverse,column,column-reverse),-wrap(nowrap,wrap,wrap-reverse),-flow,-grow(numbers),-shrink(),-basis(handel width),-flex,justify-content(flex-start,flex-end,center,space-around,space-between,space-evenly),align-content(flex-start,flex-end,center,space-around,space-between,space-evenly),align-items(flex-start,flex-end,strech,baseline,center),align-self(auto,flex-start,flex-end,center,strech,baseline),order)</h3>
+
+<div class="container">
+<div class="items item1">item1</div>
+</div>
+</body>
+</html>
+
+====================================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+.container{
+width:600px;
+height:400px;
+border:3px solid green;
+background:pink;
+padding:10px;
+display:flex;
+
+flex-direction:column;
+
+
+
+
+
+
+}
+.item1{background:red;}
+.item2{background:orange;
+display:flex;
+}
+.item3{background:green;}
+.item4{background:blue;}
+.item5{background:violet;}
+
+.items{
+height:100px;
+}
+.item2 > .subitem{
+background:green;
+color:red;
+flex-grow:1;
+margin:4px;
+}
+.item2 > .subitem2{
+background:blue;
+}
+</style>
+</head>
+<body>
+<h3>flex(-direction(row,row-reverse,column,column-reverse),-wrap(nowrap,wrap,wrap-reverse),-flow,-grow(numbers),-shrink(),-basis(handel width),-flex,justify-content(flex-start,flex-end,center,space-around,space-between,space-evenly),align-content(flex-start,flex-end,center,space-around,space-between,space-evenly),align-items(flex-start,flex-end,strech,baseline,center),align-self(auto,flex-start,flex-end,center,strech,baseline),order)</h3>
+<div class="container">
+<div class="items item1">item1</div>
+<div class="items item2">item2
+	<div class="subitem subitem1">A</div>
+	<div class="subitem subitem2">B</div>
+	<div class="subitem subitem3">C</div>	
+</div>		
+<div class="items item3">item3</div>
+<div class="items item4">item4</div>
+<div class="items item5">item5</div>
+</div>
+</body>
+</html>
+
+====================================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+#wrapper{
+background:pink;
+border:2px solid black;
+padding:10px;
+list-style:none;
+}
+#wrapper li{
+display:flex; 
+padding:5px;
+justify-content:end;
+}
+#wrapper li label{
+flex:1;
+}
+
+@media screen and (min-width:300px) and (max-width:499px)
+{
+#wrapper li{
+flex-direction:column;
+}
+#wrapper li input{
+flex:3;
+}
+}
+@media screen and (min-width:500px)
+{
+#wrapper li input{
+flex:3;
+}
+}
+@media screen and (min-width:768px)
+{
+#wrapper li input{
+flex:4;
+}
+}
+@media screen and (min-width:992px)
+{
+#wrapper li input{
+flex:5;
+}
+}
+@media screen and (min-width:1200px){
+#wrapper li input{
+flex:8;
+}
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+<h3>align form with flex-box  </h3>
+
+<form action="post">
+
+<ul id="wrapper">
+<li>
+<label for="">name</label>
+<input type="text">
+</li>
+<li>
+<label for="">class name</label>
+<input type="text">
+</li>
+<li>
+<label for="">email adress</label>
+<input type="email">
+</li>
+<li>
+<button type="submit">save</buttom>
+</li>
+</body>
+</html>
+
+====================================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+h3{
+text-align:center;
+text-decoration-line:underline overline;
+text-decoration-color:red;
+text-decoration-style:solid;
+text-decoration-thickness:10px;
+text-underline-offset:10px;
+}
+#head{
+color:red;
+}
+#box{
+color:blue;
+width:700px;
+height:300px;
+border:2px solid currentcolor;
+}
+#test{
+color:currentcolor;
+}
+ul li::marker{
+color:red;
+}
+</style>
+</head>
+<body>
+<h3>text-decoration-thickness,text-underline-offset,currentcolor,marker</h3>
+<div id="box">
+<div id="head">
+sfgdfa
+<div id="test">
+ustry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 19
+</div>
+</div>
+<ul>
+<li>this is shriman</li>
+<li>this is shriman</li>
+<li>this is shriman</li>
+<li>this is shriman</li>
+<li>this is shriman</li>
+</ul>
+</div>
+
+</body>
+</html>
+====================================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+h3{
+font-size:30px;
+color:red;
+}
+.fir{
+color:green !important;
+}
+#sec{
+color:violet;
+}
+
+
+/*
+@supports (display:flex) or  (not(  display:inline-grid)){
+body{
+background:orange;
+}
+}*/
+
+:root{
+--test:yellow;
+}
+@supports (--test:yellow)
+{
+body{background:yellow;}
+}
+</style>
+</head>
+<body>
+<h3 class="fir" id="sec" style="color:grey">important hack (priority:styel>>id>>class>>tag)</h3>
+<h2>@support(suports-condition){
+
+} 
+</h2>
+</body>
+</html>
+====================================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+/*
+input{
+border:2px solid black;
+padding:5px;
+font-size:20px;
+}
+input[type="text"]:placeholder-shown{
+border:3px solid green;
+}
+*/
+
+/*
+ul{
+list-style-type:'♠ : ';
+list-style-position:inside;
+}
+*/
+
+
+</style>
+</head>
+<body>
+<h3>placeholder-shown  ,  list-style-type="string"   ,  </h3>
+/*
+<label>fname</label><input type="text" placeholder="name"><br><br>
+<label>lname</label><input type="text" placeholder="name"><br><br>
+<label>ph</label><input type="number" placeholder="name"><br><br>
+<label>email</label><input type="email" placeholder="name"><br><br>
+<label>date</label><input type="date" placeholder="name"><br><br>
+*/
+/*
+<ul>
+<li>hnkn</li>
+<li>hnkn</li>
+<li>hnkn</li>
+<li>hnkn</li>
+*/
+</body>
+</html>
+
+====================================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+#menu{
+padding:10px;
+text-align:center;
+background:red;
+position:sticky;
+top:0;
+
+}
+html{
+width:700px;
+height:600px;
+scroll-behavior:smooth;
+}
+</style>
+</head>
+<body>
+<h3>scroll-behaviour</h3>
+<div id="menu">
+<a href="#home">home</a>
+<a href="#gallery">gallery</a>
+<a href="#about">about</a>
+<a href="#contact">contact</a>
+</div>
+
+<div class="section" id="home">
+<h2>home</h2>
+
+the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+</div>
+
+<div class="section" id="gallery">
+<h2>gall</h2>
+
+the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+</div>
+
+<div class="section" id="about">
+<h2>ab</h2>
+
+the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+</div>
+
+<div class="section" id="contact">
+<h2>cont</h2>
+the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+
+</div>
+</body>
+</html>
+====================================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+html{
+scroll-snap-type:y mandatory;
+}
+.box{
+width:100vm;
+height:100vm;
+border:2px solid black;
+background:pink;
+padding:20px;
+margin-bottom:10px;
+scroll-snap-align:start;
+}
+
+
+</style>
+</head>
+<body>
+<h3>scroll snap-type(:y mandatory,:x mandatory,:both mandatory,:y proximity,:x proximity) scroll-snap-align:staer,end,center </h3>
+<div class="main">
+<div class="box box1">
+<h2>section 1</h2>
+the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, reinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy teinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy teinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy teinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy temaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown prtook a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown prtook a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+</div>
+<div class="box box2">
+<h2>section 2</h2>
+the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and sic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typestypesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+</div>
+<div class="box box3">
+<h2>section 3</h2>
+the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a ginting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy teinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy teinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy teinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy tealley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+</div>
+<div class="box box4">
+<h2>section 4</h2>
+the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and inting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy teinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy teinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy teinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy temore recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+</div>
+</div>
+
+</body>
+</html>
+
+====================================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+.box{
+width:500px;
+height:400px;
+border:2px solid black;
+background:pink;
+padding:20px;
+margin-bottom:10px;
+scroll-snap-align:start;
+display:inline-block;
+}
+
+.main{
+width:1000px;
+height:400px;
+border:2px solid black;
+overflow-x:auto;
+white-space:nowrap;
+scroll-snap-type:x mandatory;
+}
+</style>
+</head>
+<body>
+<h3>scroll snap-type(:y mandatory,:x mandatory,:both mandatory,:y proximity,:x proximity) scroll-snap-align:staer,end,center </h3>
+<div class="main">
+<div class="box box1">
+<h2>section 1</h2>
+1
+</div>
+<div class="box box2">
+<h2>section 2</h2>
+2
+</div>
+<div class="box box3">
+<h2>section 3</h2>
+3
+</div>
+<div class="box box4">
+<h2>section 4</h2>
+4
+</div>
+</div>
+
+</body>
+</html>
+
+====================================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+html{
+scroll-snap-type:y mandatory;
+}
+.box{
+width:100vm;
+height:100vm;
+border:2px solid black;
+background:pink;
+padding:20px;
+margin-bottom:10px;
+scroll-snap-align:start;
+}
+
+
+</style>
+</head>
+<body>
+<h3>scroll snap-type(:y mandatory,:x mandatory,:both mandatory,:y proximity,:x proximity) scroll-snap-align:staer,end,center </h3>
+<div class="main">
+<div class="box box1">
+<h2>section 1</h2>
+the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, reinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy teinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy teinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy teinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy temaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown prtook a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown prtook a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+</div>
+<div class="box box2">
+<h2>section 2</h2>
+the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and sic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typestypesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+</div>
+<div class="box box3">
+<h2>section 3</h2>
+the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a ginting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy teinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy teinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy teinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy tealley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+</div>
+<div class="box box4">
+<h2>section 4</h2>
+the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and inting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy teinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy teinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy teinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy temore recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+</div>
+</div>
+
+</body>
+</html>
+
+====================================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+input[type=file]::file-selector-button{/*for chrome use : -webkit-file-upload-button*/  
+background:yellow;
+border:1px solid red;
+padding:10px;
+border-radius:10px;
+}
+input[type=file]::file-selector-button:hover{
+background:red;
+}
+</style>
+</head>
+<body>
+<h3>::file-selector-button</h3>
+<form action="">
+<label>upload file</label><input type="file" id="fileupload">
+
+
+
+</form>
+
+
+</body>
+</html>
+
+====================================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+#box{
+width:500px;
+height:400px;
+border:2px solid black;
+background:url(images/blockchain.jpg) ;
+object-fit:fill;
+
+display:flex;
+align-items:center;
+justify-content:center;
+}
+#inner{
+width:300px;
+height:200px;
+text-align:center;
+border-radius:10px;
+border:2px solid white;
+background-color:rgba(255,255,255,0.4);
+transition:backgrop-filter ,5s;
+
+
+}
+#inner:hover{
+backdrop-filter: sepia(70%) blur(5px);
+} 
+</style>
+</head>
+<body>
+<h3>backdrop-filter(blur,brightness,contrast,drop-shadow,grayscale,hue-rotate,invert,opacity,sepia,saturate,none)</h3>
+<div id="box">
+<div id="inner">haii everyone this is shriman</div>
+</div>
+
+
+</body>
+</html>
+
+========================================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+/*#box1 :is(h1,h2,h3){
+font-family:arial;
+color:red;
+}*/
+
+/*:is(#box1,#box2) h1{
+font-family:arial;
+color:red;
+}*/
+
+
+/*:is(#box1,#box2) :is(h1,p){
+font-family:arial;
+color:red;
+}*/
+
+:is(#box1,#box2) p:hover{
+font-family:arial;
+color:red;
+}
+</style>
+</head>
+<body>
+<h3>:is() </h3>
+<div id="box1">
+<h1>section1</h1>
+<h2>sub1</h2>
+<p>tting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type stting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and </p>
+<h2>sub2</h2>
+<p>scrambled it to make a type stting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type s</p>
+</div>
+<hr>
+<div id="box2"><h1>section2<h2/><p>tting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type stting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and </p></div>
+</body>
+</html>
+
+=======================================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+#box{
+width:400px;
+border:2px solid black;
+padding:10px;
+
+writing-mode:vertical-rl;
+text-orientation: upright;
+}
+</style>
+</head>
+<body>
+<h3>text-orientation(mixed(default),upright,sideway,sideway-right)</h3>
+<div id="box">
+<h1>sdfsdfg</h1>
+</div>
+</body>
+</html>
+
+
+=======================================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+*{
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+}
+body{
+background:orange;
+}
+form{
+background:pink;
+}
+form:focus-within{
+background:grey;
+}
+form > input:focus-within{
+background:skyblue;
+}
+</style>
+</head>
+<body>
+
+<form>
+<h3>:focus-within</h3>
+<label>name</label><input type="text"><br><br>
+<label>email</label><input type="email"><br><br>
+<label>gender</label><input type="radio" name="gender"><label>male</label><input type="radio" name="gender"><label><female</label><br><br>
+
+<label>hobbies</label><input type="checkbox" name="hobbies"><label>music</label>
+<input type="checkbox" name="hobbies"><label>playing</label><br><br>
+
+<label>select county</label>
+<select>
+<option>slajd</option>
+<option>agaf</option>
+<option>fsdf</option>
+<option>sgadf</option>
+</select>
+<form>
+
+</body>
+</html>
+
+=======================================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+body{
+	font-family:arial;
+	line-height:24px;
+}
+h3{
+	width:100%;
+	height:100px;
+	background:pink;
+}
+#table{
+display:table;
+width:700px;
+border:2px solid red;
+margin:0 auto;
+}
+.col{
+	display: table-cell;
+	border:2px solid blue;
+	padding:10px;
+}
+.row{
+	display:table-row;
+}
+#table-header{
+	display:table-header-group;
+	background:rgb(230, 173, 213);
+	text-align:center;
+	font-weight:bold;
+}
+#table-footer{
+	display:table-footer-group;
+	background:lightgreen;
+	text-align:center;
+	font-weight:bold;
+}
+#row-group{
+	display:table-row-group;
+}
+#table-colgroup{
+	display: table-column-group;
+}
+.table-col{
+	display: table-column;
+}
+.col-2{
+	background:pink;
+	width:300px;
+
+	text-align:center; 		/*not effected*/
+	border:2px solid rgb(255, 0, 0);		/*not effected*/
+}
+.col-1{
+	background:lightcyan;
+}
+.col-3{
+	background:rgb(204, 255, 122);
+}
+.caption{
+	display:table-caption;
+	text-align:center;
+	text-transform:uppercase;
+	font-weight:bold;  
+
+}
+</style>
+</head>
+<body>
+<h3>display(none,inline,block,inline-block,list-item,flex,grid,inline-flex,inline-grid,table,table-cell,table-row,table-cilumn,table-caption,table-column-group,table-row,group,table-header-group,table-footer-group),
+	table</h3>
+
+<div id="table">
+	<div class="caption">
+		<h2>student information</h2>
+	</div>
+	<div id="table-colgroup">
+		<div class="table-col col-1">col 1</div>
+		<div class="table-col col-2">col 2</div>
+		<div class="table-col col-3">col 3</div>
+	</div>
+	<div id="table-header">
+		<div class="col">roll NO</div>
+		<div class="col">student name</div>
+		<div class="col">marks</div>
+	</div>
+<div id="row-group">
+	<div class="row">
+		<div class="col" style="vertical-align:middle;">1</div>
+		<div class="col">shrimanshrimanshrimans
+			hrimanshrimanshrimanshrimanshrimanshr
+			imanshrimanshrimanshrimanshrimanshr
+			imanshrimanshrimanshriman</div>
+		<div class="col">99</div>
+
+	</div>
+	<div class="row">
+		<div class="col">2</div>
+		<div class="col">shashank</div>
+		<div class="col">100</div>
+
+	</div>
+	<div class="row">
+		<div class="col">3</div>
+		<div class="col">ank</div>
+		<div class="col">101</div>
+
+	</div>
+</div>
+	<div id="table-footer">
+		<div class="col"></div>
+		<div class="col">total</div>
+		<div class="col">99</div>
+	</div>
+</div>
+</body>
+</html>
+
+=======================================================

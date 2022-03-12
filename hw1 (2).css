@@ -1,0 +1,103 @@
+body{
+    padding:10px;
+    margin:5px;
+}
+.left{
+    background-color:#808000 ;
+    float: left;
+}
+.left a img{
+    display: block;
+    height: 100px;
+    width: 100px;
+    margin:15px;
+}
+
+header{
+background-color:#808080 ;
+background-image: url("image/flywheel.jpg");
+height:150px;
+padding:15px;
+}
+
+ header h1{
+     font-size: 20px;
+     color:#ffffff;
+     text-transform: uppercase;
+     text-align: center;
+ } 
+
+ header nav a{
+     color:#000000;
+     background-color: #C0C0C0;
+     opacity:0.8;
+position: relative;
+padding:15px;
+
+margin:30px;
+border-radius: 10px;
+text-decoration: none;
+}
+header nav{
+    margin:90px 0 auto 100px;
+    text-align: center;
+justify-content: space-around;
+}
+header nav a:active{
+    background-color: rgb(245, 240, 240);
+    opacity: 1;
+}
+
+.right{
+    margin-left: 160px;
+}
+
+section .right h2{
+    text-transform:uppercase ;
+    color:#00008b;
+
+}
+.left img{
+    border: 2px solid rgb(12, 12, 12);
+}
+table{
+    position: relative;
+    left:80px;
+    top:30px;
+    width:800px;
+    height: 500px;
+    margin-bottom: 50px;
+}
+
+table tr th{
+    background:rgb(203, 212, 65);
+    color:rgb(240, 235, 235);
+    font-weight: bold;
+    font-size: 19px;
+    border-radius: 3px 3px 0 0;
+    padding:10px;
+    border-bottom:3px solid rgb(86, 236, 16);
+}
+table tr td{
+    background-color: #b9dd65;
+    opacity: .7;
+    padding:6px;
+    font-style: inherit;
+    padding:6px;
+}
+table tr td:hover{
+    opacity: .9;
+    font-weight: bold;
+}
+table tr th:first-child{
+    text-align: left;
+}
+table tr th{
+    text-align: center;
+}
+table tr td{
+    text-align: center;
+}
+table tr td:first-child{
+    text-align: left;
+}

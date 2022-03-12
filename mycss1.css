@@ -1,0 +1,1120 @@
+
+
+
+ /* 3 ways to implement
+1.inlinne style
+2.inpage style tag
+3.external style sheet */
+
+/*inline style
+
+<h1 style="color:green;font-size:15px">
+welcome to my house
+</h1>*/
+/*inpage style tag*/
+
+/*external style sheet
+
+<head>
+   <link rel="stylesheet" type="text/css" href="filename.css">
+</head>
+*/
+
+/*border styles
+solid,dotted,dashed,double,groove,ridge,insert,outset,None,mix
+*/
+================================================================
+
+<html>
+<head>
+  <title>my age</title>
+  <style>
+  #box{
+  
+  }
+
+  </style>
+
+</head>
+<body>
+  <h1></h1>
+  <div id="box">
+	ext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
+  </div>
+
+
+</body>
+</html>
+=====================================================================================================
+
+
+
+<html>
+  <head>
+    <title>imagetag</title>
+  </head>
+<body>
+  <h1 style="color:orange;background-color:yellow;">hii this is shriman</h1>
+  <p style="color:green;background-color:pink">
+     <span style="background-color:violet">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </span>
+  </p>
+</body>
+</html>
+
+====================================================
+
+<html>
+<head>
+  <title>out line</title>
+  <style>
+  h1{
+    /*border-width:4px;
+    border-style:solid dotted groove dashed;
+    border-color:red;*/
+    /*  border:3px double red *//*
+    border-bottom:2px solid red;
+    border-top:2px solid yellow;
+    border-left:2px solid green;
+    border-right:2px solid orange;
+  }
+    p{border:3px solid red;
+      outline:2px dashed green;
+  /*  outline-width:3px;
+    outline-style:groove;
+    outline-color:green;*//*
+    outline-offset:5px;
+  }
+
+
+  </style>
+</head>
+<body>
+  <h1>my page</h1>
+  <p>s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has  Lorem Ipsum.</P>
+  <p>s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has Lorem Ipsum.</P>
+</body>
+
+</html>
+*/
+=======================================
+
+<html>
+<head>
+  <title>class border</title>
+  <style>
+    test{
+      border:3px solid black;
+      /*outline:5px dashed red;*/
+      /*padding:10px *//*or 10px 20px */ /*or 10px 20px  ///30px 40px;*//*;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>my page</h1>
+  <div class="test">
+    <p>s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has  Lorem Ipsum.</P>
+  </div>
+
+</body>
+
+</html>
+
+=================================================
+<html>
+  <head>
+   <title>hiii</title>
+     <style>
+     h1{
+       border:10px solid green;
+       margin:0 0 50px 0;
+     }
+     #first{
+       border:3px solid black;
+       padding:10px;
+       margin-bottom:30px;
+     }
+     #first1{
+       border:3px solid red;
+       padding:10px;
+       margin:30px;
+     }
+
+     #first2{
+       width:500px;
+       border:3px solid violet;
+       padding:10px;
+       margin:auto 0 auto auto;
+     }
+     </style>
+  </head>
+  <body>
+    <h1>my web page</h1>
+    <div id="first">
+      srgarasjjfggaslbbas/jj
+    </div>
+
+
+    <div id="first1">
+      fdafhgdfgdfdfgfdg
+    </div>
+
+    <div id="first2">
+      fdafhgdfgdfdfgfdg
+    </div>
+    hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+  </body>
+</html>
+==============================================================
+<html>
+<head>
+  <title>height and width</title>
+  <style>
+  img{
+    height:200px;
+    max-width:300px;
+    min-width:10px;
+  }
+    #first{
+      min-width:10px;
+      max-width:500px;
+      border:2px solid black;
+      min-height:200px;
+      max-height:300px;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>hlo guys</h1>
+  <div id="first">
+    <img src="image/blockchain.jpg" /><br>
+
+    typesetting, remaining essentiallyaaaaaaaaaaaaaaaaaaaaaaa
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    aaaaaaaaaaaaaaaaaaaaaa
+  </div>
+
+
+</body>
+</html>
+
+================================================
+
+<html>
+<head>
+  <title>box sizing</title>
+  <style>
+  #box{
+    width:400px;
+    border:20px solid green;
+    padding:50px;
+    box-sizing:border-box;
+  }
+
+  </style>
+
+</head>
+<body>
+  <h1>box sizing</h1>
+  <div id="box">
+     is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+  </div>
+
+
+</body>
+</html>
+==========================================================
+
+<html>
+<head>
+  <title>overflow</title>
+  <style>
+    #box{
+      width:250px;
+      height:250px;
+      padding:25px;
+      border:2px solid orange;
+      overflow:scroll;
+  /*  overflow-x: auto;*/
+  border-top-left-radius:20px;
+  border-bottom-right-radius:20px;
+  /*border-radius:20px 30px 40px  55px;*/
+  -webkit-border-radius:20px 30px;
+
+    }
+    #box2{
+      width:150px;
+      height:200px;
+      border:3px solid blue;
+      border-radius:50%;
+      background-color:yellow;
+      padding-top : 200px;
+      padding-left:21px;
+      padding-right:10px;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>haiii </h1>
+  <div id ="box">
+     <img src="image/blockchain.jpg" />
+    haii this is shriman and my father  name is  narayana...
+    good morning sir...this is  shriman...i have graduated as information science enginneering  from nitte meenakshi institute of engineering,yalahanka,bangalore...
+    i am interested in blockchain developping...
+    my hobbies are playing reading and working hard..
+    this  a simple bref introduction on myself....
+    i have scored 7.7 cgpa in semister 1 in my engineering and 8.65 in second semister...8.35 in 3rd year engineering...
+    and my average cgpa is : 8.85
+    my father name is narayana mogaveera and my mother name is gulabi and my sister name is nagarathi and  my besst friend name is shashank...
+    currently i am studying in 3rd semister in nitte meeenakshi institute if engineering banglore.....
+
+  </div>
+  <div id="box2">
+      hlo  everyone...how r u.
+      <img src="image/blockchain.jpg" />
+  </div>
+<img src="image/blockchain.jpg" />
+
+</body>
+</html>
+
+========================================================
+<html>
+<head>
+  <title>box shadow</title>
+  <style>
+    #box{
+
+      width:250px;=
+      height:250px;
+      border:3px solid orange;
+      padding:10px;
+
+      box-shadow:-10px 20px 10px 10px orange inset,-10px 20px 10px 10px red; /*horizontal-affset,vertical-offset,blur,spread,color*/
+    }
+  </style>
+
+</head>
+<body>
+  <h1>this is shriman</h1>
+  <div id="box">
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </div>
+
+
+</body>
+</html>
+==========================================
+
+<html>
+<head>
+  <title>float</title>
+  <style>
+    #box{
+      width:30%;
+      height:50%;
+      border:2px solid black;
+      float:left;
+      margin-right:20px;
+    }
+    #box2{
+      width:30%;
+      height:40%;
+        border:2px solid red;
+        float:left;
+    }
+    #box3{
+      width:30%;
+      height:40%;
+        border:2px solid red;
+        float:right;
+    }
+  </style>
+
+</head>
+<body>
+  <h1></h1>
+  <div id="box">
+         remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </div>
+  <div id="box2">
+         remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </div>
+  <div id="box3">
+         remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </div>
+
+</body>
+</html>
+
+======================================================
+<html>
+<head>
+  <title>clear </title>
+  <style>
+    #box1{
+      width:300px;
+      border: 2px solid red;
+      background-color:pink;
+      float:left;
+    }
+    #box2{
+      width:300px;
+      border: 2px solid red;
+      background-color:yellow;
+      float:right;
+    }
+    #box3{
+      width:100%;
+      border 2px solid red;
+        background-color:blue;
+        clear:both;
+    }
+
+  </style>
+
+</head>
+<body>
+  <h1>hlo everyone this  is shriman and i  hav graduated as a information science enginner fro nmit bangaore....</h1>
+  <div id="box1">
+     simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has  Lorem Ipsumsimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has  Lorem Ipsum.simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has  Lorem Ipsum.
+
+  </div>
+  <div id="box2">
+     simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has  Lorem Ipsum.
+
+  </div>
+  <div id="box3">
+     simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has  Lorem Ipsum.
+
+  </div>
+
+</body>
+</html>
+====================================================
+/*font properties:font size,family,weight,style,varient,height
+font size:Xx-small,Xsmall,smal,smaller,large,larger,xlarge,Xxlarge
+
+<html>
+<head>
+  <title>font properties</title>
+  <style>
+  body{
+    font-size:20px;
+    font-weight:600;
+
+  }
+    #box1{
+      width:400px;
+      padding:20px;
+      border:2px solid black;
+      margin-bottom :10px;
+      font-size:2em;
+      line-height:40px/*,2em*/;
+      font-weight:bolder;
+      font-family:arial;
+      font-style:oblique;
+      font-variant:small-caps;
+      /*shorthand*/
+  /*    font:oblique small-caps normal 1em/40px arial,helvetica,verdana;
+  */
+    }
+    #box2{
+      width:400px;
+      padding:20px;
+      border:2px solid black;
+      font-size:20px;
+      font-family:arial;
+
+}
+
+  </style>
+
+</head>
+<body>
+  <h1>hlo everyone....how r you</h1>
+  <div id="box1">
+     haii everyone head tite .fot properties title box width paddding border style head body body h1 yaho baba fonts div id box lorem si div body html
+  </div>
+  <div id="box2">
+     haii everyo <span> ne hea<span>d tite fot properties title</span> box width padd </span> ding border style head body body h1 yaho baba fonts div id box lorem si div body html
+  </div>
+
+
+</body>
+</html>
+==========================================
+<html>
+<head>
+  <title>text properties</title>
+  <style>
+/*text-align,text-align-last,text-transform,text-indent,text-spacing,letter-spacing*/
+    #box{
+      border:2px solid black;
+      width:300px;
+      padding:10px;
+      font-family:arial,helvetica;
+      text-align:justify;
+      text-align-last:center;
+      text-transform:capitalize;
+      text-indent:100px;
+      word-spacing:20px;
+      letter-spacing:3px;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>lalalalalalalalalalalalalala</h1>
+  <div id="box">
+    also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+  </div>
+
+
+</body>
+</html>
+===============================
+<html>
+<head>
+  <title>text decorations</title>
+  <style>
+    /*text-decoration-line,text-decoration-color,,text-decoration-style,underline,overline,line-through,none,*/
+    /*shorthand:decotarion-line decoration-color decoration-style*/
+    h1{
+      text-decoration-line:underline;
+      text-decoration-color:red;
+      text-decoration-style:wavy;
+      /*shorthand*/
+      /*text-decoration:underline red wavy*/
+    }
+    #box{
+      width:400px;
+      padding:10px;
+      border:2px solid red;
+      font-family:arial,helvetica;
+      text-decoration-line:line-through;
+      text-decoration-color:orange;
+
+    }
+  </style>
+
+</head>
+<body>
+  <h1>sssssssssssssssssssss</h1>
+  <div id="box">
+    also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+  </div>
+
+
+</body>
+</html>
+=======================================
+<html>
+<head>
+  <title>word wrap,word break</title>
+  <style>
+    #box{
+      width:400px;
+      border:5px solid orange;
+      font-size:40px;
+      word-wrap:break-word /*to break big word*/;
+      word-break:break-all/*to break all words and not to leave any space in the lines*/;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>css word wrap and word break</h1>
+  <div id="box">
+    sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    ssssssssssssssssssssssssssssssss
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+  </div>
+
+
+</body>
+</html>
+===========================================
+<html>
+<head>
+  <title>text shadow</title>
+  <style>
+    #asd{
+      font-size:50px;
+      text-transform:uppercase;
+      font-size:100px;
+      text-shadow:5px 5px 1px green,9px 9px 5px red;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>text shadow(h-shadow,v-shadow,blur-shadow,color)</h1>
+  <div id="asd">
+    abcdefghijkkl
+  </div>
+
+
+</body>
+</html>
+=========================================================
+<html>
+<head>
+  <title>my age</title>
+  <style>
+    #box{
+      border:2px solid red;
+      white-space:nowrap;
+      overflow:hidden;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>white space</h1>
+  <div id="box">
+    simply dummy text of the printing     and typeset
+    ting industry. Lorem Ipsum has been the indust
+    ry's standard dummy text ever since the 1500s, whe
+    n an unknown printer took a galley of type and scram
+    bled it to make a type specimen book. It has  Lor
+    em Ipsumsimply dummy text of the printing and type
+    setting industry. Lorem Ipsum has been the industry's s
+    tandard dummy text ever since the 1500s, when an un
+    known printer took a galley of type and scrambled it
+    to make a type specimen book. It has  Lorem Ipsum.
+    simply dummy text of the printing and typesetting
+    industry. Lorem Ipsum has been the industry's st
+    andard dummy text ever since the 1500s, when a
+    n unknown printer took a galley of type and scra
+    mbled it to make a type specimen book. It has
+    Lorem Ipsum.
+  </div>
+
+
+</body>
+</html>
+============================================================
+<html>
+<head>
+  <title>my age</title>
+  <style>
+    #box{
+      border:2px solid red;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>overflow</h1>
+  <div id="box">
+    simply dummy text of the printing     and typesetting industry. Lorem Ipsum has been the indusry's standard dummy text ever since the 1500s, whe  n an unknown printer took a galley of type and scram  bled it to make a type specimen book. It has  Lor
+    em Ipsumsimply dummy text of the printing and type  setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+    to make a type specimen book. It has  Lorem Ipsum.  simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scra  mbled it to make a type specimen book. It has
+    Lorem Ipsum.
+  </div>
+
+
+</body>
+</html>
+
+=========================================================
+<html>
+<head>
+  <title>my age</title>
+  <style>
+  #box{
+    width:50%;
+    border:2px solid red;
+    writing-mode:vertical-rl;
+    /*writing-mode:sideways-rl; (only firefox supports)*/
+    /*writing-mode:vertical-lr;*/
+    /*writing-mode:horizontal-tb;(default)*/
+  }
+
+  </style>
+
+</head>
+<body>
+  <h1>writing modes</h1>
+  <div id="box">
+    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <span style="background-color:violet">when an unknown printer took a galley of type and scrambled it to make a type specimen book. </span>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+  </div>
+
+
+</body>
+</html>
+==============================================================
+<html>
+<head>
+  <title>my age</title>
+  <style>
+  #box{
+    width:800px;
+    column-count:3;
+    column-gap:50px;
+    column-rule-width:5px;
+    column-rule-style:dotted;
+    column-rule-color:red;
+
+    /*shoetthand*/
+  /*  column-rule:5px dotted red;*/
+    column-width:20px;
+  }
+  h2{
+    column-span:all;
+  }
+
+  </style>
+
+</head>
+<body>
+  <h1>column count properties(count,gap,rule,rule-width,rule-style,rule-color,width,fill,span)</h1>
+  <div id="box">
+    <h2>heading is here</h2>
+    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <span style="background-color:violet">when an unknown printer took a galley of type and scrambled it to make a type specimen book. </span>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <span style="background-color:violet">when an unknown printer took a galley of type and scrambled it to make a type specimen book. </span>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+  </div>
+
+
+</body>
+</html>
+
+=============================================================
+<html>
+<head>
+  <title>my age</title>
+  <style>
+  @font-face{
+    font-family:OpenSans;
+    src:url(fonts/OpenSans-Italic-webfont.eot),url(fonts/OpenSans-Italic-webfont.woff);
+  }
+  #box{
+  font-family:OpenSans;
+  }
+  h1{
+    font-family:OpenSans;
+  }
+
+  </style>
+
+</head>
+<body>
+  <h1>@font-face</h1>
+  <div id="box">
+    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <span style="background-color:violet">when an unknown printer took a galley of type and scrambled it to make a type specimen book. </span>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+  </div>
+
+
+</body>
+</html>
+
+============================================================
+<html>
+<head>
+  <title>my age</title>
+<link href="https://fonts.googleapis.com/css2?family=Qahiri&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+  <style>
+  h1{
+    font-family: 'Zen Tokyo Zoo', cursive;
+  }
+    #box{
+      font-family: 'Qahiri', sans-serif;
+      font-size:50px;
+     }
+  </style>
+
+</head>
+<body>
+  <h1>google fonts</h1>
+  <div id="box">
+    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <span style="background-color:violet">when an unknown printer took a galley of type and scrambled it to make a type specimen book. </span>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+  </div>
+
+
+</body>
+</html>
+=================================================================
+<html>
+<head>
+  <title>my age</title>
+  <style>
+    ul{
+      border:5px solid blue;
+      list-style-type:square;
+      list-style-position:inside;
+      list-style-image:url(images/right-arrow.png);
+    /*  list-style:none inside ulr(images/right-arrow.png);*/
+    }
+    ul li{
+      padding:10px;
+    }
+    ol{
+      list-style-type:upper-roman;
+      list-style-position:inside;
+      list-style-image:ulr(images/right-arrow.PNG);
+
+
+    }
+  </style>
+
+</head>
+<body>
+  <h1>list-style</h1>
+  <div id="box">
+    <ul>
+      <li>ashd</li>
+      <li>ashd</li>
+      <li>ashd</li>
+      <li>ashd</li>
+      <li>ashd</li>
+
+    </ul>
+    <ol>
+      <li>ashd</li>
+      <li>ashd</li>
+      <li>ashd</li>
+      <li>ashd</li>
+      <li>ashd</li>
+
+    </ol>
+
+  </div>
+
+
+</body>
+</html>
+==============================================
+<html>
+<head>
+  <title>my age</title>
+  <style>
+  body{
+    background-image:url(images/blockchain.jpg),url(images/rightarrow.png);
+    background-repeat:no-repeat,no-repeat;
+    background-repeat:repeat-y,repeat-x;/* y */
+    background-repeat:space;
+    background-position:center top,left bottom;
+    background-position:50px 100px,100px 100px;
+    background-color:skyblue;
+    /*shoethand*/
+    background:skyblue url(images/blockchain.jpg) no-repeat right bottom;
+    background-attachment:fix;/*images fixed..it will not be scrolled*/
+
+  }
+
+  </style>
+
+</head>
+<body>
+  <h1>background image,attachment,size</h1>
+  <div id="box">
+    <b>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <span style="background-color:violet">when an unknown printer took a galley of type and scrambled it to make a type specimen book. </span>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</b>
+  </div>
+  <div id="box">
+    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <span style="background-color:violet">when an unknown printer took a galley of type and scrambled it to make a type specimen book. </span>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </div>
+
+
+</body>
+</html>
+======================================================
+
+<html>
+<head>
+  <title>my page</title>
+  <style>
+	#box{
+	
+	width:800px;
+	height:400px;
+	padding:30px;
+	border:15px dotted red;
+	background-color:pink;
+	background-image:url(images/blockchain.jpg);
+	background-repeat:repeat;
+	background-size:300px;
+	
+	background-origin:/*content-box*//*padding-box*/border-box;
+	
+	background-clip:/*content-box*/padding-box/*border-box(default)*/;
+	}
+	
+  </style>
+
+</head>
+<body>
+  <h1>background-size,background-arigin,background-clip</h1>
+  <div id="box">
+	<span style="background-color:violet">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </span>
+  </div>
+
+
+</body>
+</html>
+========================================================
+<html>
+<head>
+  <title>my age</title>
+  <style>
+  body{
+  font-family:arial;
+  background-image:url(images/blockchain.jpg);
+  background-size:300px;
+  background-repeat:repeat;
+  }
+	#box{
+		width:800px;
+		height:400px;
+		padding:20px;
+		border:5px dotted red;
+		background-color:/*red*//*rgb(0,100,155)*//*hsl(178,100%,40%)*//*rgba(231,0,0,0.3)*/hsla(570,100%,10%,0.7);
+	}
+  </style>
+
+</head>
+<body>
+  <h1>COLOR-MODES [rgb(red green blue),hsl(hue,saturation,lightness),a(alpha)]</h1>
+  <div id="box">
+     <span style="background-color:violet">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </span>
+
+  </div>
+
+
+</body>
+</html>
+=======================================================
+<html>
+<head>
+  <title>my age</title>
+  <style>
+  #box{
+  width:800px;height:400px;
+  border:10px solid blue;
+  padding:10px;
+/*  background:linear-gradient(to top right, blue,skyblue,green,red,indigo);*//*to top right => 45deg*/
+/*  background:linear-gradient(red,rgba(255,0,0,0.5))*/
+background:repeating-linear-gradient(to right,red ,yellow 20%,green 10%);
+  }
+  
+  #box2{
+  width:2000px;height:800px;
+  border:10px solid blue;
+  padding:10px;
+  /*background:radial-gradient(circle,red 5%,yellow 20%,blue 50%);*/
+ /* background:radial-gradient(closest-side at 90% 90%,red, yellow,blue);*/
+/* background:radial-gradient(farthest-side at 90% 50%,red,yellow,blue)*/
+/* background:radial-gradient(farthest-corner at 10% 10%,red,yellow,blue)*/
+  /*background:radial-gradient(closest-side at 10% 10%,red,yellow,blue)*/
+   background:repeating-radial-gradient(circle,black,white 10px);
+  }
+
+  </style>
+
+</head>
+<body>
+  <h1>gradients(linear,radical,repeated-linerar,repeated-radical)</h1>
+  <div id="box">
+  haii everyone.this is shriman and i have graduated as a information science engineer from nitte meenakshi instiitue of technology,yalahanka bangaloore...my father name is narayana and my mother name is gulabi and my sister name is nagarathi nad my friend name is shashank and i am living in gopadi villag,koteshwara post,kundapura taluk,udupi district,karnataka state and i am an proud indian.....
+
+  </div>
+ <h2>radial gradient</h2>
+ <div id="box2">
+  haii everyone.this is shriman and i have graduated as a information science engineer from nitte meenakshi instiitue of technology,yalahanka bangaloore...my father name is narayana and my mother name is gulabi and my sister name is nagarathi nad my friend name is shashank and i am living in gopadi villag,koteshwara post,kundapura taluk,udupi district,karnataka state and i am an proud indian.....
+
+  </div>
+
+
+</body>
+</html>
+===================================================
+<html>
+<head>
+  <title>my age</title>
+  <style>
+  #box{
+  widht:600px;
+  height:200px;
+  padding:30px;
+  border:5px solid black;
+  margin-bottom:20px;
+  background:red;
+  opacity:0.5;
+  /* for old versions (filter:alpha(opacity=50))*/
+  
+  }
+   #box2{
+  widht:600px;
+  height:200px;
+  padding:30px;
+  border:5px solid black;
+  margin-bottom:20px;
+  background:red;
+
+  background:rgba(200,0,0,0.3);
+  
+  }
+  img{
+  float:left;
+  margin-right:25px;
+  
+  </style>
+
+</head>
+<body>
+  <div id="box">
+  <img src="images/blockchain.jpg" width="200px" height="200px">
+    <h2>opacity</h2>
+  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+
+  </div>
+
+  <div id="box2">
+  <img src="images/blockchain.jpg" width="200px" height="200px">
+    <h2>opacity</h2>
+  t of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+
+  </div>
+
+
+</body>
+</html>
+=======================================================
+<html>
+<head>
+  <title>my age</title>
+  <style>
+  #box{
+  width:500px;
+  height:400px;
+  border:5px solid red;
+  background-image:linear-gradient(to right,red,yellow), url('images/blockchain.jpg');
+  background-blend-mode:difference;
+}
+#box2{
+  width:500px;
+  height:400px;
+  border:5px solid red;
+  padding:20px;
+  background-image:url('images/blockchain.jpg');
+  
+}
+h1{
+background:red;
+text-align:center;
+font-size:50px;
+margin-top:25px;
+mix-blend-mode:saturation;
+}
+
+
+  </style>
+
+</head>
+<body>
+  <h2>background-blend-mode( normal,multiply,screen,overlay,darken,lighten,color-dodge,color-burn,hard-light,soft-light,difference,exclusion,hue,color,saturation,luminosity),
+  mix-blend-mode(same as previous types)</h2>
+  <div id="box">
+	ext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
+  </div>
+ <div id="box2">
+ <h1>BACKGROUND mix blend bode</h1>
+ </div>
+
+</body>
+</html>
+==================================================
+
+<html>
+<head>
+  <title>my age</title>
+  <style>
+  #box{
+  width:440px;
+  height:440px;
+  border:3px solid black;
+   /* background-color:red;*/
+  background:linear-gradient(to right ,blue,yellow)
+  
+  }
+  img{
+  mix-blend-mode:screen;
+  }
+  h2{
+  background:red;
+  text-align:center;
+  font-size:50px;
+  margin-top:150px;
+
+  </style>
+
+</head>
+<body>
+  <h1></h1>
+  <div id="box">
+  <img src="images/blockchain.jpg" >
+<h2>haii hloo</h2>
+  </div>
+
+
+</body>
+</html>
+==============================================
+<html>
+<head>
+  <title>my age</title>
+  <style>
+  body{font-family:arial;
+  }
+  #box{
+  widht:800px;
+  height:500px;
+  border:5px solid black;
+  
+  }
+  h2{
+  font-size:75px;
+  }
+
+  h2.fir{
+  color:green;
+  }
+  
+    h2.sec{
+  color:red;
+  margin-top:-120px;
+  margin-left:10px;
+  mix-blend-mode:lighten;
+  
+  }
+
+  </style>
+
+</head>
+<body>
+  <h1></h1>
+  <div id="box">
+	<h2 class="fir">name is shriman</h2>
+	<h2 class="sec">name is shriman</h2>
+  </div>
+
+
+</body>
+</html>
+==================================================
+

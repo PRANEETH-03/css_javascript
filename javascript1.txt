@@ -1,0 +1,3282 @@
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<script src="test1.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+<h3>js,writing,adding html tags,commenting lines,variables(var(can be declared again,can be overridden),let(can be overridden,cannot be declared again),const(cannot be overridden and cannot be declared again))</h3>
+
+<script>
+document.write("<b>haii everyone </b><br>");
+document.write("haii everyone<br>");
+
+//single line comment
+/*multiline comment*/
+var name="shriman";
+var score=345;
+document.write(name,score);
+
+var first,second;
+first=34;
+document.write(first);
+
+let x="shrimannm";
+document.write(x);
+
+
+const y="shri";
+document.write(y);
+</script>
+
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>data-types(string("haii"),number(43),boolean(true,false),array(["sdf","sad","asaf"];),object({x:"ada",y:"drf"};),null),undefined(not yet defined the variable)</h3>
+
+
+<script>
+var x="my self shriman";
+x=45;
+x=false;
+x=["this","is","shriman"];
+
+var y={name:"shriman",state:"karnataka"};
+document.write(x);
+document.write("<br>");
+document.write(typeof x);
+document.write(y);
+document.write(typeof y);
+
+
+</script>
+</body>
+</html>
+
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>arithmetic operators,assignment operators</h3>
+
+<script>
+/*
+var a=3;
+var b=4;
+var c=a+b;
+var d=a-b;
+var e=a*b;
+var f=a**3;
+document.write(c);
+document.write("<br>");
+document.write(d);
+document.write("<br>");
+document.write(e);
+document.write("<br>");
+document.write(f);
+document.write("<br>");
+a++;
+document.write(a);
+document.write("<br>");
+document.write(a+b+c);
+document.write("<br>");
+var g=(a+b)*c;
+document.write(g);
+*/
+
+var a=23;
+var b=34;
+a += b;
+document.write(a);
+document.write("<br>");
+
+var c=10;
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3 id="main">google chrome <span>console</span></h3>
+
+<script>
+console.time("test");
+var x=100;
+c *= 10;
+document.write(c);
+</script>
+</body>
+</html>
+
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+x += 10;
+console.table(x);
+console.table([1,2,3]);
+console.error("error");
+console.warn("warning");
+console.clear();
+console.timeEnd("test");
+</script>
+</body>
+</html>
+
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>comparisoin operators(==,===(both value and type shud be equal),!=,!==(both value and type shudn't be equal),>,<,>=,<=)</h3>
+
+<script>
+var x=10;
+var y="10";
+document.write(x==y);
+document.write(x !== "10");
+document.write(x>=y);
+document.write(null==undefined);/*(true)*/
+document.write(null===undefined);/*(flase,since data type of null and undefined is not same)*/
+</script>
+</body>
+</html>
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>if statment,logical operators(&&,||,!),concatination,
+ternary operator[(condition)? true-statment : false-statment]</h3>
+
+<script>
+/*
+var x=32;
+if(x<10 || x>33){
+document.write("x is greater then 10");
+}
+else{
+document.write(x + " is lesser then 10");
+}
+*/
+
+/*
+var x=12;
+if(x>=1 && x<12){
+document.write("good morning..time is: "+x);
+}
+else if(x>=12 && x<=16){
+document.write("good afternoon..time is: "+x);
+}
+else if(x>16 && x<=20){
+document.write("good evening..time is: "+x);
+}
+else{
+document.write("good nyt..time is: "+x);
+}
+*/
+
+var x=12;
+var y = "value is " + ((x>13)? "true" : "false");
+document.write(y);
+</script>
+</body>
+</html>
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>switch statment</h3>
+
+<script>
+var day=23;
+switch(day){
+case 1:case 8:case 15:case 22:case 29:document.write("monday");
+break;
+
+case 2:case 9:case 16:case 23:case 30:document.write("tuesday");
+break;
+
+case 3:case 10:case 17:case 24:case 31:document.write("wednday");
+break;
+
+case 4:case 11:case 18:case 25:document.write("thurday");
+break;
+
+case 5:case 12:case 19:case 26:document.write("friday");
+break;
+
+case 6:case 13:case 20:case 27:document.write("satday");
+break;
+
+case 7:case 14:case 21:case 28:document.write("sunday");
+break;
+
+default:document.write("enter valid day");
+}
+/*
+switch(true){
+case(x>=3 && x<=4):dcument.write(x)
+break;
+case(x<=3 && x>=4):dcument.write(x)
+break;
+}
+*/
+
+
+</script>
+</body>
+</html>
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>alert box(pop up message),confirm box,promt box</h3>
+
+<script>
+/*
+var a=23;
+var b=34;
+if(a>b){
+alert("a is greater i.e : "+a);
+}
+else{
+alert("b is greater i.e : "+b);
+}
+*/
+/*
+var a = confirm("do u want to open camera");
+if(a){
+alert("camera is open");
+}
+else{
+alert("camera is not open");
+}
+*/
+/*
+//var a = prompt("enter u r name");
+//document.write("haii " + a);
+
+var m=prompt("enter u r mark : ");
+if(m>=85 && m<=100){
+document.write("distintion");
+}
+else if(m>=70 && m<85){
+document.write("first class");
+}
+else if(m>=55 && m<70){
+document.write("second class");
+}
+else if(m>=35 && m<55){
+document.write("third calss");
+}
+else{
+document.write("fail");
+}
+*/
+</script>
+</body>
+</html>
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>functions,functions with parameters,and with return value,local and global variables</h3>
+
+<script>
+/*
+function fun_name(){
+document.write("dfsg");
+}
+
+fun_name();
+fun_name();
+fun_name();
+*/
+/*
+function sum(a=5,b=5){
+document.write(a+b +"<br>");
+}
+sum(2,4);
+sum(3);
+sum();
+}
+*/
+
+/*
+function name(fname="shriman",lname="nm"){
+var a=fname + " " +lname;
+return a;
+}
+
+var x = name("hai","all");
+document.write(x);
+*/
+/*
+var a="shriman";
+function fun(){
+var b="kalla";
+document.write(a,b);
+}
+fun();
+document.write(a);//b is local to funtion fun..so cannot be printed outside the functio.
+*/
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>events(click(onclick),double click(ondblclick),right click(oncontextmenu),mouse hover(onmouseenter),mouse out(onmouseout),mouse down(onmousedown),mouse up(onmouseup),key press(onkeyprees)->(allowed inside body tag and form tag),key up(onkeyup),load(onload),unload(onunload),resize(onresize),scroll(onscroll))< /h3>
+
+<script>
+function fun(){
+document.write("haii");
+}
+</script>
+<button onclick="fun()">click here</button>
+<p ondblclick="fun()">click</p>
+<p oncontextmenu="fun()">click</p>
+</body>
+</html>
+
+==========================================
+
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>loop(initialization,condition,iftrue(inc.. or dec..),if false(out of loop))
+while,do/while,for,for/in(for objects),foreach(for arrays)</h3>
+
+<script>
+/*
+var a=1;
+document.write("<ul>");
+while(a<=10){
+document.write("<li> shriman </li>");
+a++;
+}
+document.write("</ul>");
+*/
+/*
+var a=1;
+document.write("<ul>");
+do{
+document.write(" <li> shriman </li>");
+a++;
+}
+while(a<=10)
+document.write("</ul>");
+*/
+for(var a=1;a<=10;a++){
+document.write("shriman <br>");
+}
+
+
+
+</script>
+</body>
+</html>
+
+==========================================
+
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>break and continue,even/odd number wth loop,nested loop</h3>
+
+<script>
+/*
+for(var a=1;a<=10;a++){
+if(a==3){
+document.write("shriman  "+a);
+continue;
+}
+document.write("haiii  "+a);
+}*/
+/*
+for(var a=1;a<=100;a++){
+if(a % 2==0){
+document.write("||even : "+a);
+}
+else{
+document.write("||odd : "+a);
+}
+}
+*/
+/*
+for(var a=1;a<100;a+=10){
+for(var b=a;b<a+10;b++){
+document.write(b+"  ");
+}
+document.write("<br>");
+}
+*/
+/*
+for(var a=1;a<=5;a++){
+for(var b=1;b<=a;b++){
+document.write(b+ "  ");
+}
+document.write("<br>");
+}
+*/
+</script>
+
+
+</body>
+</html>
+
+==========================================
+
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>arrays ,multi-dimentional array</h3>
+
+<script>
+/*
+var a=[1,2,3];
+var sum=0;
+for(var i=0;i<3;i++){
+document.write(a[i]+"<br>");
+sum += a[i];
+}
+document.write("sum : "+sum+"<br>");
+
+var x=["a","b","c"];
+for(i=0;i<3;i++){
+document.write(x[i]+" ");
+}
+*/
+/*
+var a=new Array(1,"as",34);
+document.write(a);
+*/
+/*
+var a=new Array();
+for(var i=0;i<3;i++){
+a[i]=prompt("enter the value : ");
+}
+document.write(a);
+*/
+
+//multi-dimentional array
+var a=[
+["as",12,"xcds","133"],
+["ad",13,"adx","12df3"],
+["af",14,"ghf","12eA"],
+["ag",15,"azx","12e3f"],
+["ag",15,"azx","12e3f"]
+];
+var b=[1,32,4,1];
+document.write(a.length);
+
+document.write("<table border='2px' cellspacing='2px' cellpadding='5px'>");
+document.write("<tr>");
+for(var k=0;k<a[0].length;k++){
+document.write("<th>" + b[k] + "</th>");
+}
+document.write("</tr>");
+
+
+for(var i=0;i<a.length;i++){
+document.write("<tr>");
+for(var j=0;j<a[0].length;j++){
+document.write("<td>" + a[i][j] + "</td>");
+}
+document.write("</tr>");
+}
+document.write("</table>");
+
+
+
+</script>
+</body>
+</html>
+==========================================
+
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>modify and remove array elements,array methods(sort,reverse,pop,push,shift,unshift,concat,join
+slice,splice,isArray,indexOf,lastIndexOf,entries,every,filter,
+find,findindex,includes,some,foreach,tostring,valueof,fill)</h3>
+
+<script>
+/*
+var a=[1,"shriman",34,"asas"]
+document.write(a+"<br>");
+a[1]="shashank";
+document.write(a+"<br>");
+
+delete a[1];
+document.write(a+"<br>");
+document.write(a[1]+"<br>");
+*/
+
+var a=[3,2,6,1,5];
+
+a.sort();		//sorts in ascending
+document.write(a+"<br>");
+
+a.reverse();		//sorts in decending
+document.write(a+"<br>");
+
+a.pop();		//removes last ele
+document.write(a+"<br>");
+
+a.push(7);	//adds new value at the end of array
+document.write(a+"<br>");
+
+a.shift();	//removes first value form array
+document.write(a+"<br>");
+
+a.unshift(9);	//adds ele at front of the array
+document.write(a+"<br>");
+
+var b=a.concat("abc","def");	//makes new array by concatinating the arrays
+document.write(b+"<br>");
+var x=[1212,2323];
+var c=a.concat(b,x);
+document.write(c+"<br>");
+
+var d=b.join("!!");	//makes single string from the given array
+document.write(d+"<br>");
+
+document.write("a : "+a+"<br>");
+document.write(a.slice(1,3)+"<br>");	//to get some middle values
+document.write(a.slice(-3,)+"<br>");
+
+a.splice(2,0,22,33);	//(index,no.of ele delete,new values)
+document.write(a+"<br>");
+a.splice(2,3,"as","sd");	//from 2nd index deletes 3 ele and adds new value
+document.write(a+"<br>");
+a.splice(3,2);    //removes 2 values from 3 index onwards
+
+
+document.write("a : "+a+"<br>");
+document.write(Array.isArray(a)+"<br>");	//check array or not
+
+a.push(5);
+document.write("a : "+a+"<br>");
+
+
+document.write(a.indexOf(5,2)+"<br>");	//(value,starting index)-it gives index of particular value
+
+document.write(a.lastIndexOf(5,2)+"<br>");	//sameas previous but it searche from last
+
+
+document.write(a.includes(8)+"<br>");    //checks wheather the value exists in array or not
+
+document.write(a.some(checkfun)+"<br>");    //returns true if any 1 value satisfies the condition
+function checkfun(age){
+return age >= 8;
+}
+
+delete a[2];
+document.write(a.every(checkfun) + "<br>");   //returns true if all ele obay the condition
+function checkfun(age){
+return age >= 1;
+}
+document.write("a : "+a+"<br>");
+
+document.write(a.find(finding)+"<br>");	//returns number which will first satisfy the condition
+function finding(age){
+return age <= 5;
+}
+
+document.write(a.findIndex(finding)+"<br>");	//same as prev...but returns its index
+function finding(age){
+return age <= 5;
+}
+
+document.write(a.filter(filtering)+"<br>");	//returns the values which satifies the condition
+function filtering(age){
+return age >= 6;
+}
+
+
+var z=["as","fdf","aas"]
+document.write(z + "<br>");
+z.toString();		//converts array to string
+document.write(z+ "<br>");
+document.write(z[1]+ "<br>");
+
+
+document.write(a.valueOf() + "<br>"); //prints the array
+
+
+a.fill("ram");	//replace all ele in array by given ele
+document.write(a);
+
+a.forEach(xyz);	//traverse throught all ele in array
+function xyz(value,index){
+document.write(index + " : " + value + "<br>");
+}
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>objects</h3>
+
+<script>
+/*
+var a={
+fname:'shriman',
+lname:"nm",
+age:25,
+email:"18shrimanmogaveer@gmail.com",
+hobbies:['playing','writing','reading'],
+salary:function(){
+return 25000;
+},
+fullname:function(){
+return this.fname + " " + this.lname;
+},
+
+living:{
+'city':'kundapur',
+'village':'gopadi'
+}
+}
+console.log(a);
+document.write(a.fname + "<br>");
+document.write(a.hobbies[1]+ "<br>");
+document.write(a.salary() + "<br>" );
+document.write(a.fullname() + "<br>");
+document.write(a.living.city);
+*/
+
+//method 2
+var a=new Object();
+a.fname="shriman";
+a.lname="nm";
+a.age=23;
+
+console.log(a);
+document.write(/*a.fname*/a["fname"]);
+
+</script>
+</body>
+</html>
+==========================================
+
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>array of object</h3>
+
+<script>
+var a=[
+  {name:"ram",age:23},
+  {name:"sam",age:22},
+  {name:"tam",age:21}
+];
+
+console.log(a);
+
+for(var i=0;i<a.length;i++){
+document.write(a[i].name + a[i].age +"<br>");
+}
+
+
+</script>
+</body>
+</html>
+
+==========================================
+
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>const variable in array(we can change individual value of a const object..but cannot reasign that with new value at a time)</h3>
+
+<script>
+/*
+const a=[20,34,346,64];
+a[1]=23;   //possinble
+ //  a=[13,4,235,134];  (not possible)
+console.log(a);
+*/
+
+const a={
+name:"shriman",
+age:34
+}
+a.name="kalla"	//possible
+/*    not possible
+(((
+a={
+name:"iman",
+age:35
+}
+)))*/
+console.log(a);
+</script>
+</body>
+</html>
+
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>for/in loop,Array-map()</h3>
+
+<script>
+/*
+var a={
+fname:"shrman",
+lname:"nm",
+age:13,
+country:"india"
+}
+for(var i in a){document.write(i + " : " + a[i] + "<br>");
+}
+*/
+/*
+var a=[12,3,34,25,13,56];
+var b=a.map(test);
+document.write(b);
+
+function test(x){
+return x*10;
+}
+*/
+var a=[
+{fname:"aaa",lname:"www" },
+{fname:"bbb",lname:"qqq"},
+{fname:"ccc",lname:"rrr"}
+]
+
+var b=a.map(test)
+function test(x){
+return x.fname + " " +x.lname;
+}
+document.write(b);
+</script>
+</body>
+</html>
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>string methods(length,toLowerCase(),toUpperCase(),includes(),
+startsWith(),endsWith(),search(),match(),indexOf(),
+lastIndexOf(),replace(),trim(),charAt(),charCodeAt(),
+fromCharCode(),concat(),split(),repeat(),slice(),
+substr(),substring(),toString(),valueOf())</h3>
+
+<script>
+var a="haii alll...this is shriman is doing that and currently studying JS";
+var x=a.length;
+document.write(x);
+
+x=a.toLowerCase();
+document.write(x+"<br>");
+
+x=a.toUpperCase();
+document.write(x+"<br>");
+
+document.write(a.includes("curr" )+ "<br>");	//returns true if letter found in the string
+
+document.write(a.startsWith("haii")+"<br>");	//returns true if the string starts with that letter
+
+document.write(a.endsWith("JS")+"<br>");	//returns true if the string ends with that letter
+
+document.write(a.search("and")+"<br>");	//returns the index of the letter that is specified
+
+document.write(a.match(/is/g)+"<br>");	//returns the array with no of repetations of that letter
+
+document.write(a.indexOf("is")+"<br>");	//search the letter from the begining
+
+document.write(a.lastIndexOf("is")+"<br>");	//search the letter from the end
+
+var x=a.replace("JS","JAVA")	//replace the letter
+document.write(x+"<br>");
+x=a.replace(/is/g,"are");	//rplace all existance of the letter
+document.write(x+"<br>");
+/*
+var y="                     shriman         ";
+alert(y);
+var z=y.trim();	//removes unwanted space
+alert(z);
+*/
+
+document.write(a.charAt(5)+"<br>");	//returns letter present in the specified position
+
+
+document.write(a.charCodeAt(5)+"<br>");	//returns ascii value of particule letter in mentioned position
+
+document.write(String.fromCharCode(65));	//returns the letter of corresponding ascii value
+
+var str="LALALA";
+var str2="HAHAHA";
+document.write(a.concat(str,str2)+"<br>");	//concats the strings
+
+document.write(a.split("")+"<br>");	//splits the string from the mentioned value
+
+document.write(a.repeat(4)+"<br>");	//repeats the string 4 times
+
+document.write(a.slice(3,15)+"<br>");	//prints character between these 2 index
+
+document.write(a.substr(3,15)+"<br>");	//prints the character from 3rd index and prints 15 character after this
+
+document.write(a.substring(3,15)+"<br>");	//same as slice
+
+var m=23321;
+document.write(m.toString());	//converts to string
+
+
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>number methods</h3>
+
+<script>
+var a="23" ;
+
+var num=Number(a);	//convert string to number form
+document.write(num+12 + "<br>");
+
+
+var b="023.54 45"
+document.write(parseInt(b)+"<br>");	//first no is returned
+
+var c="13.45 30";
+document.write(parseFloat(c)+"<br>");
+
+var d=34;
+document.write(Number.isInteger(d)+"<br>");	//checks integer or not
+
+
+var e=203457;//"hello" => infinite
+document.write(isFinite(e)+"<br>");	//checks wether the numbr is finite or not
+
+var f=123.372;
+document.write(f.toFixed(2)+"<br>");	//returns 2 val after decimal
+
+var g=4.3678;
+document.write(g.toPrecision(2));	//returns 2 values by rounding off the values
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>math modules(ceil(x),floor(x),round(x),trunc(x),
+max(x,y,z,.....,n),min(x,y,z,...,n),sqrt(x),
+cbrt(x),pow(x,y),random(),
+abs(x),PI</h3>
+
+<script>
+var a=23.54;
+document.write(Math.ceil(a)+"<br>");	//nerest next value
+document.write(Math.floor(a)+"<br>");	//nearest previous value
+
+document.write(Math.round(a)+"<br>");	//it will round of the given number
+
+document.write(Math.trunc(a)+"<br>");	//returns the integer part in a number
+
+document.write(Math.max(4,7,1,5,3,9)+"<br>");	//returns max value
+
+document.write(Math.min(4,7,1,5,3,9)+"<br>");	//returns the min value
+
+document.write(Math.sqrt(4)+"<br>");	//returns square root
+document.write(Math.cbrt(8)+"<br>");	//returns cube root
+document.write(Math.pow(4,3)+"<br>");	//power function
+
+document.write(Math.floor((Math.random()*100)+1)+"<br>");	//return random number between 0 1nd 1..if want can modify it as above
+
+document.write(Math.abs(-23.4)+10+"<br>");	//removes minus and gives absolute value
+
+
+document.write(Math.PI+"<br>");	//returns pie value
+</script>
+</body>
+</html>
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>date methods(toDateString(),getDate(),getFullYear(),
+getFullMonth(),getDay(),getHours().getMinutes(),
+getSeconds(),getMilliseconds(),setDate(),setFullYear(),
+setHours(),setMilliseconds(),setMinutes(),setMonth(),
+setSeconds())</h3>
+
+<script>
+var d=new Date();
+
+document.write(d.toDateString()+"<br>");	//returns day,mon,year
+
+document.write(d.getDate()+"<br>");
+document.write(d.getFullYear()+"<br>");
+document.write(d.getMonth()+"<br>");
+document.write(d.getDay()+"<br>");
+document.write(d.getHours()+"<br>");
+document.write(d.getMinutes()+"<br>");
+document.write(d.getSeconds()+"<br>");
+document.write(d.getMilliseconds()+"<br>");
+
+d.setFullYear(2020);
+document.write(d+"<br>");
+
+d.setDate(20);
+document.write(d+"<br>");
+
+d.setMonth(2);
+document.write(d+"<br>");
+
+d.setHours(12);
+document.write(d+"<br>");
+
+var now=new Date();
+document.write(now.getDate() + "/" + now.getMonth() + "/" + now.getFullYear() + "<br>");
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+#outer{
+width:400px;
+height:400px;
+background:orange;
+}
+#inner{
+width:200px;
+height:200px;
+background:yellow;
+margin:100px auto 0 ;
+}
+</style>
+</head>
+<body>
+<h3></h3>
+<div id="outer">
+<h4>outer</h4>
+<div id="inner">
+<h4>inner</h4>
+</div>
+</div>
+<script>
+ document.querySelector("#inner").addEventListener("click",function(){
+ alert("inner div");
+ },true);		//outer then inner...defalut is false i.e inner then outer
+
+  document.querySelector("#outer").addEventListener("click",function(){
+ alert("outer div");
+ },true);
+
+
+
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html id="main">
+<head>
+<title>my page</title>
+<style>
+body{
+
+}
+#outer{
+width:740px;
+height:400px;
+background:pink;
+
+}
+#inner{
+width:600px;
+height:300px;
+background:orange;
+margin-top:auto;
+margin-left:0px;
+margin-right:10px;
+}
+div{
+width:80px;
+height:80px;
+background:yellow;
+display:flex;
+margin:auto 10px auto auto;
+border:2px solid grey;
+}
+h2{
+height:40px;
+
+}
+</style>
+</head>
+<body>
+<h3></h3>
+<div id="outer"><h2>outer</h2>
+<div id="inner">
+<h2>inner</h2>
+
+<div>a</div>
+<div>b</div>
+<div id="child-c">c</div>
+<div>d</div>
+<div>e</div>
+</div>
+</div>
+
+<script>
+
+document.getElementById("inner").parentElement.style.background="red";
+//returns null if there is no parent node
+var a= document.getElementById("inner").parentElement;
+console.log(a);
+
+
+document.getElementById("child-c").parentElement.style.background="green";
+
+
+var c=document.getElementById("main").parentNode;
+//returns something if there is no parent node
+console.log(c);
+
+
+document.getElementById("inner").children[3].style.background="grey";	//target for child node of id(tag)=inner
+var d=document.getElementById("inner").children[3];
+console.log(d);
+
+var d=document.getElementById("inner").childNodes[5];	//target for all things like text comment enter...etc
+console.log(d);
+
+document.getElementById("inner").firstElementChild.style.background="orange";	//target to first child
+var d=document.getElementById("inner").firstElementChild;
+console.log(d);
+
+document.getElementById("inner").lastElementChild.style.background="orange";	//target to first child
+var d=document.getElementById("inner").lastElementChild;
+console.log(d);
+
+
+var e=document.getElementById("child-c").firstChild;
+console.log(e);
+
+
+e=document.getElementById("inner").lastChild;
+console.log(e);
+
+e=document.getElementById("child-c").nextElementSibling.style.background="violet";
+e=document.getElementById("child-c").nextElementSibling;		//target to next sibling tag
+console.log(e);
+
+
+document.getElementById("child-c").previousElementSibling.style.background="pink";//target to next sibling tag
+var f=document.getElementById("child-c").previousElementSibling;
+console.log(f);
+
+var g=document.getElementById("child-c").nextSibling;	//target to everything..for text,comment,space etc..
+console.log(g);
+
+
+var h=document.getElementById("child-c").previousSibling;
+console.log(h);
+</script>
+</body>
+</html>
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+#text{
+width:500px;
+height:500px;
+background:orange;
+}
+</style>
+</head>
+<body>
+<h3>DOM creat methods(creatElement,creatTextNode,creatComment),DOM append methods(appendChild=appends the items,insertBefore=insert at particulaar position,insertAdjacentElement(beforebegin,beforeend,afterbegin,afterend)=creat and insert tag,insertAdjacentHTML=creat and insert tag with text,insertAdjacentText=ceat and insert text,)</h3>
+<div id="text"><p>haii everyone</p></div>
+<script>
+/*
+var newele=document.createElement("h3");	//creates paragraph element
+console.log(newele);
+var newtext=document.createTextNode("this is shriman");	//adds text to our html
+console.log(newtext);
+
+var newcomment=document.createComment("this is comment");
+console.log(newcomment);
+
+//appending text to tag
+
+newele.appendChild(newtext);
+console.log(newele);
+*/
+/*
+//append this to document at last
+document.getElementById("text").appendChild(newele);
+document.getElementById("text").appendChild(newcomment); adds the comment
+*/
+/*
+//append in middle
+var target=document.getElementById("text");
+target.insertBefore(newele,target.childNodes[0]);
+*/
+
+/*
+var a=document.createElement("h3");
+var t=document.createTextNode("this is me");
+a.appendChild(t);
+
+var target=document.getElementById("text");
+target.insertAdjacentElement("beforebegin",a);
+*/
+/*
+var a="<h2>this is new method</h2>"
+var target=document.getElementById("text");
+target.insertAdjacentHTML("beforebegin",a);
+*/
+/*
+var a="new text";
+var target=document.getElementById("text");
+target.insertAdjacentText("beforebegin",a);
+*/
+
+</script>
+</body>
+</html>
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>replaceChild(),removeChild()</h3>
+<ul id="alpha">
+<li>abc</li>
+<li>def</li>
+<li>ghi</li>
+<li>jkl</li>
+<li>mno</li>
+</ul>
+<script>
+/*
+var a=document.createElement("li");
+var b=document.createTextNode("this is text");
+a.appendChild(b);
+
+target=document.getElementById("alpha");
+var oldele=target.children[0];
+
+//console.log(oldele);
+
+target.replaceChild(a,oldele);
+*/
+
+target=document.getElementById("alpha");
+var oldele=target.children[2];
+
+target.removeChild(oldele);
+
+
+</script>
+</body>
+</html>
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>DOM cloneNode method</h3>
+<ul id="list1">
+<li>abc</li>
+<li>def</li>
+<li>ghi</li>
+<li>jkl</li>
+<li>mno</li>
+</ul>
+
+<ul id="list2">
+<li>pqr</li>
+<li>stu</li>
+<li>xyz</li>
+</ul>
+<script>
+var target=document.getElementById("list1").children[2];
+var copyele=target.cloneNode(true);//default is false(it just coppies its attribute..not inner values)
+
+console.log(copyele);
+
+document.getElementById("list2").appendChild(copyele);
+
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>DOM contains()</h3>
+<div id="box">
+<h4>haiiii</h4>
+<p id="abc">printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer</p>
+
+<p>printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer</p>
+
+</div>
+<script>
+var a=document.getElementById("box");
+var target=document.getElementById("abc");
+
+var find=a.contains(target);	//returns true if that id is found
+console.log(find);
+</script>
+</body>
+</html>
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>hasAttribute()=>to check that particular tag has any other attribute or not ,hasChildNodes()=>checks if it has a child node or not(counts everything..even space),isEqualNode()=>(condition==same nodetype,nodename,nodevalue,childnodes,attribute,attributevalue)</h3>
+
+<div id="test" class="test1"></div>
+
+
+<ul id="list1">
+<li>orange</li>
+<li>apple</li>
+<li>banana</li>
+<li>pinapple</li>
+<li>lemon</li>
+</ul>
+
+
+
+<ul id="list2">
+
+<li>apple</li>
+<li>orange</li>
+<li>banana</li>
+<li>pinapple</li>
+<li>lemon</li>
+</ul>
+
+<script>
+/*
+var target=document.getElementById("test");
+
+var find=target.hasAttribute("class");
+console.log(find);
+*/
+/*
+var target=document.getElementById("test");
+
+var find=target.hasChildNodes();
+console.log(find);
+*/
+
+var target1=document.getElementById("list1").firstElementChild;
+var target2=document.getElementById("list2").children[1];
+
+var e=target1.isEqualNode(target2);
+console.log(e);
+
+
+
+
+</script>
+</body>
+</html>
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>form events<(keydown,keypress,keyup,focus()=effect when we focus on it,blur()=effects when we focus and leave it,input=what ever we write will abel to display somewhere else,
+    change(same as input but it effects once the mouse is left),select(it is called when we select particulat text ),submit(effects once we click a submit button),invalid)</h3>
+<form onsubmit="funsubmit()">
+<label>name</lable><input type="text" id="fname" onfocus="funfocus(this)" onblur="funblur(this)" oninput="funinput(this)" oninvalid="alert('fill the name')" required><br><br>
+
+
+<label>class</lable><input type="text" id="class" onfocus="funfocus(this)" onblur="funblur(this)" onchange="funchange(this)"><br><br>
+
+
+<label>class</lable><input type="text" id="section" onselect="funselect(this)"><br><br>
+
+<label>email</lable><input type="email" id="section" onselect="funselect(this)" oninvalid="alert('enter correct email id')"><br><br>
+
+
+<label>country</lable>
+<select onchange="funchange(this)">
+<option>india</option>
+<option>us</option>
+<option>uk</option>
+<option>canada</option>
+</select>
+<br><br>
+<input type="submit">
+
+</form><br><br>
+
+<div id="test" style="border:2px solid black;">
+
+</div>
+<script>
+
+function funfocus(ele){
+ele.style.background="red";
+}
+
+function funblur(ele){
+ele.style.background="";
+}
+
+function funinput(ele){
+var x= ele.value;
+document.getElementById("test").innerHTML = x
+}
+
+function funchange(ele){
+var x=ele.value;
+document.getElementById("test").innerHTML = x
+}
+
+function funselect(ele){
+var x=ele.value;
+document.getElementById("test").innerHTML = x
+}
+
+function funsubmit(){
+var x=document.getElementById("fname").value;
+alert(x+" your form submitted");
+}
+
+</script>
+</body>
+</html>
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<title>my page</title>
+<style>
+#box{
+width:1000px;
+height:1000px;
+background:yellow;
+}
+</style>
+</head>
+<body>
+<h3>setinterval(fun_name,milliseconds),clearinterval()</h3>
+
+<div id="box"></div>
+
+
+<script>
+
+setInterval(anim,500);
+
+function anim(){
+var z=(Math.floor(Math.random()*1000));
+var y = "#800"+z;
+
+
+var target=document.getElementById("box");
+target.style.background=y;
+}
+</script>
+</body>
+</html>
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+<title>my page</title>
+<style>
+#box{
+width:100px;
+height:100px;
+background:yellow;
+}
+</style>
+</head>
+<body>
+<h3>setinterval(fun_name,milliseconds),clearinterval(),
+setTimeout(funname,millisecond),clearTimeout()</h3>
+
+<button onclick="stopanim()">stop animation</button>
+
+<div id="box"></div>
+
+
+<script>
+
+c = setInterval(anim,500);
+
+function anim(){
+var z=(Math.floor(Math.random()*1000));
+var y = "#800"+z;
+
+var target=document.getElementById("box");
+target.style.background=y;
+}
+
+var a=setTimeout(animation,4000);
+
+function animation(){
+var target=document.getElementById("box");
+target.style.width="300px";
+}
+
+var x=setTimeout(stopanim,6000);
+function stopanim(){
+clearTimeout(c);    //OR clearInterval(c);
+
+}
+</script>
+</body>
+</html>
+==========================================
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body onresize="resize()">
+<h3>BOM=browser object model
+window height and width(innerheight,innerwidth,outerheight,outerwidth)
+</h3>
+
+<script>
+
+function resize(){
+var ih=window.innerHeight;
+console.log("inner height : "+ih);
+
+var oh=window.outerHeight;
+console.log("outerheight : "+oh);
+}
+
+
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>window.open(URL,name(_blank,_parent,_self,_top),specs),window.close()
+moveBy(),moveTo() ,resizeBy(),resizeTo(),scrollBy(),scrollTo()</h3>
+
+<button onclick="openwindow()" style="background:red;">open window</button>
+
+<button onclick="closewindow()" style="background:red;">close window</button>
+
+<button onclick="moveto()">moveto</button>
+
+<button onclick="moveby()">moveby</button>
+
+<button onclick="resizeto()">resizeto</button>
+
+<button onclick="resizeby()">resizeby</button>
+
+<button onclick="scrollby()" style="position:fixed;left:50px;bottom:50px;">scrollby</button>
+
+<button onclick="scrollto()" style="position:fixed;left:100px;bottom:100px;">scrollto</button>
+<div>
+<p style="width:1000px;border:2px solid red;">the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently wthe printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus ith desktop publishing software like Aldus </p></div>
+<script>
+
+var mywindow;
+function openwindow(){
+mywindow=window.open("","_blank","width=500px,height=300px,left=100px,top=300px");
+mywindow.document.write("<p>hsi</p>");
+}
+
+function closewindow(){
+mywindow.close();
+}
+
+function moveto(){
+mywindow.moveTo(100,100);
+window.focus();
+}
+
+function moveby(){
+mywindow.moveBy(100,100);
+window.focus();
+}
+
+function resizeto(){
+mywindow.resizeTo(400,400);
+}
+function resizeby(){
+mywindow.resizeBy(200,200);
+}
+
+function scrollby(){
+window.scrollBy(20,20);//x-axis,y-axis(scrolls by 20px)
+}
+
+function scrollto(){
+window.scrollTo(20,20);//x-axis,y-axis(goes to top by gap 20px)
+}
+
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>location object=console.log(location.,,,,)(hash,host,hostname,href,origin,pathname,port,protcol,search)
+
+location object methods(Assign(),Reload(),Replace())
+</h3>
+<button onclick="loc()">yahoobaba</button>
+
+<button onclick="loca()">reload</button>
+
+<button onclick="locat()">google</button>
+
+<button onclick="locati()">replace</button>
+<script>
+
+document.write(location.href);
+
+function loc(){
+location.href="http://www.yahoobaba.net";
+}
+
+function loca(){
+location.reload();
+}
+
+
+function locat(){
+location.assign("https://www.google.com");
+}
+
+function locati(){
+location.replace("https://www.google.com");
+}
+</script>
+</body>
+</html>
+
+<button onclick="locati()">replace</button>
+<script>
+
+document.write(location.href);
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>history objects(length),back(),forward(),go()</h3>
+<button onclick="backward()">back</button>
+
+<button onclick="forward()">forward</button>
+
+<button onclick="go()">go</button>
+
+<script>
+function forward(){
+history.back();
+}
+
+function backward(){
+history.forward();
+}
+
+function go(){
+history.go(-1);
+}
+</script>
+</body>
+</html>
+
+==========================================
+===========================================
+==========================================
+ADVANCED JS
+-----------
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>var(redeclare,reassign,global scope) and let(no redeclare,reassign,block scope) and const(no redeclare,no reassign,block scope) variable</h3>
+
+<script>
+var a="hello";
+var a="baii";
+a="haii";
+console.log(a);
+
+let b=23;
+b=45;
+console.log(b);
+
+const c=67;
+console.log(c);
+
+if(true){
+var x=34;
+console.log(x);	//no error
+}
+console.log(x);	//no error
+
+if(true){
+let y=45;
+console.log(y);	//no error
+}
+// console.log(y);  (error)
+
+if(true){
+const z=99;
+console.log(z);	//no error
+}
+//  console.log(z);      (error)
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>template strings or template literals</h3>
+
+<script>
+var a="hai";
+var m=99;
+
+var b=`${a} shriman. your mark is <b>"${m}"</b>`;
+
+document.write(b+"<br>");
+
+
+
+var fn="shriman";
+var ln="nm";
+
+function fullname(fn,ln){
+return `${fn} ${ln}`;
+}
+
+var d=`${a} ${fullname(fn,ln)}. your mark is <b>"${m}"</b>`;
+document.write(d);
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>arrow function(let a = () => {document.write("");})</h3>
+
+<script>
+name="shriman";
+ let a = (age)=> {		//if one parameter is there then no need "()" and if only 1 line defination the no need "{}"
+ return `hloo ${name}-${age}`;
+ }
+ document.write(a(19));
+document.write(typeof a);
+</script>
+</body>
+</html>
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>rest operators = ...name(used in function declaration,for more number of arguments in a function)</h3>
+
+<script>
+
+
+    function sum(){
+	console.log(arguments);
+	var sum=0;
+	for(let i in arguments){
+	sum+=arguments[i];
+	}
+	document.write(sum+"<br>");
+    }
+sum(33,2,5,3,4,2,4,7);
+
+
+    function sum1(name,course,...args){
+
+	var sum=0;
+	for(let i in args){
+	sum+=args[i];
+	}
+	document.write(`${name} ${course} your age is ${sum} <br>`);
+    }
+sum1("shriman","ise",33,2,5,3,4,2,4,7);
+sum1("shashank","cse",44,12,45,2);
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>spread operators = ...array(used in function calling)</h3>
+
+<script>
+
+    function sum1(name,course,...args){
+
+	var sum=0;
+	for(let i in args){
+
+	sum+=args[i];
+	}
+	document.write(`${name} ${course} your age is ${sum} <br>`);
+    }
+    var arr=[1,2,3,4,5];
+    var arr1=[12,43,56,12];
+sum1("shriman","ise",...arr);
+sum1("shashank","cse",...arr1);
+
+
+var a=[1,2,3,4,5];
+var b=a;
+console.log(b);
+a.pop();		//it effects b also
+console.log(b);
+
+
+var a1=[1,2,3,4,5];
+var b1=[...a1];
+console.log(b1);
+a1.pop();		//it doesnt effect b1
+console.log(b1);
+
+
+var a2=[1,2,3,4,5];
+var b2=[12,33];
+var c2 = [11,44,...a2,...b2,66];	//concates
+console.log(c2);
+a2.push(99);		//doesnt effect c2
+console.log(c2);
+
+
+var obj1={
+name:"shriman",
+course:"ise"
+};
+var obj2={
+age:"19"
+};
+
+var obj3 = {...obj1, ...obj2};	//concates object
+console.log(obj3);
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>object literals</h3>
+
+<script>
+
+let name="shriman";
+course="ise";
+var obj={
+name,
+course,
+detail(){			//previous = detail:function(){};
+return `${this.name} is a student of ${this.course}`
+}
+};
+console.log(obj);
+document.write(obj.detail());
+document.write(obj[`detail`]());	//o/p same as above
+let a="mark";
+var obj1={
+[a+"s"]:32
+};
+console.log(obj1);
+console.log(obj1.marks);
+
+
+var x="shriman nm";
+var y="info scie engi";
+
+let z=(name,course)=>{
+return {name,course}
+}
+console.log(z(x,y));
+
+</script>
+</body>
+</html>
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>destructing array</h3>
+
+<script>
+ let user=["shriman",25,"delhi",["male",230000]];
+ let [name,age=20,city,[gender,salary]] = user;		//uses age =20 if not declares above
+ document.write(name+"<br>");
+ document.write(age+"<br>");
+ document.write(city+"<br>");
+  document.write(gender+"<br>")  ;
+   document.write(salary+"<br>");
+
+
+
+let a=[12,34,11];
+let [x,...z]=a;
+document.write(x+"<br>");
+document.write(z+"<br>");
+
+var fun=([name,age=20,city])=>{
+ document.write(name+"<br>");
+ document.write(age+"<br>");
+ document.write(city+"<br>");
+ return [12,34,65];
+}
+var [l,m,n] = fun(["ash",23,"kundapur"]);
+document.write(l+"<br>");
+document.write(m+"<br>");
+document.write(n+"<br>");
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>destructing object</h3>
+
+<script>
+let user={
+name:"shriman",
+age:23
+};
+let {name:n,age:a} = user;
+document.write(n +"<br>"+a)
+
+</script>
+</body>
+</html>
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>OOP
+objects,
+methods(constructor,prototype,static=(without creating objects we can cll it))</h3>
+
+<script>
+/*
+class car{		//class
+brand(){		//method
+console.log("haii");
+}
+}
+let a=new car();
+a.brand();
+*/
+
+class student{
+constructor(name,age){
+this.stuname=name;
+this.stuage=age;
+console.log("haiii eeryone");
+}
+fun1(){
+console.log(`haiii  ${this.stuname} your age is ${this.stuage}`);
+}
+static fun2(){
+console.log("inside static method");
+}
+}
+var a=new student("shriman",19);
+a.fun1();
+
+var b=new student("shashank",20);
+b.fun1();
+
+student.fun2();
+</script>
+</body>
+</html>
+==========================================
+
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>inheretence</h3>
+
+<script>
+/*
+class employee{
+constructor(name){
+document.write(`haiii ${name}<br>`);
+}
+}
+
+class manager extends employee{
+constructor(name){
+super();		//checks wheather constructor is there in parent class or not..if there it calls that
+document.write(`hloo   ${name} <br>`);
+}
+
+
+}
+var a=new employee("shriman");
+var b=new manager("shashank");
+*/
+/*
+class employee{
+constructor(name,age,salary){
+this.empname=name;
+this.empage=age;
+this.empsal=salary;
+document.write(`haiii ${name}<br>`);	//name or this.empname
+}
+info(){
+document.write(`<h2>employee class</h2>
+			name: ${this.empname}<br>
+			age: ${this.empage}<br>
+			salarye: ${this.empsal}<br>`);
+}
+}
+
+class manager extends employee{
+info(){
+super.info();
+document.write(`<h2>manager class</h2>
+			name: ${this.empname}<br>
+			age: ${this.empage}<br>
+			salarye: ${this.empsal}<br>`);
+}
+
+}
+var a=new manager("shriman",19,100000);
+a.info();
+*/
+
+/*
+class employee{
+constructor(name,age,salary){
+this.empname=name;
+this.empage=age;
+this.empsal=salary;
+document.write(`haiii ${name}<br>`);	//name or this.empname
+}
+info(){
+document.write(`<h2>employee class</h2>
+			name: ${this.empname}<br>
+			age: ${this.empage}<br>
+			salarye: ${this.empsal}<br>`);
+}
+}
+
+class manager extends employee{
+
+
+info(){
+
+var ta=1000;
+var pa=500;
+var bonus=10000;
+var totsal=this.empsal+ta+pa+bonus;
+
+document.write(`<h2>manager class</h2>
+			name: ${this.empname}<br>
+			age: ${this.empage}<br>
+			salarye: ${totsal}<br>`);
+}
+}
+
+class ceo extends manager{
+info(){
+var bonus=20000;
+var finsal=this.empsal+bonus;
+
+document.write(`<h2>ceo class</h2>
+			name: ${this.empname}<br>
+			age: ${this.empage}<br>
+			salarye: ${finsal}<br>`);
+}
+
+
+}
+var a=new manager("shriman",19,100000);
+var b=new employee("shriman",21,50000);
+var c=new ceo("shriman",30,2000000);
+a.info();
+b.info();
+c.info();
+*/
+
+
+class employee{
+constructor(name,age,salary){
+this.empname=name;
+this.empsal=salary;
+this.empage=age;
+}
+info(){
+document.write(`<h3>Employee :</h3>
+			name : ${this.empname}<br>
+			age : ${this.empage}<br>
+			salary : ${this.empsal}<br>`);
+}
+}
+class manager extends employee{
+info(){
+super.info();
+var bonus=20000;
+this.empsal+=bonus;
+document.write(`<h3>Manager :</h3>
+			name : ${this.empname}<br>
+			age : ${this.empage}<br>
+			salary : ${this.empsal}<br>`);
+}
+}
+class ceo extends manager{
+info(){
+super.info();
+var bonus=40000;
+this.empsal+=bonus;
+document.write(`<h3>Ceo :</h3>
+			name : ${this.empname}<br>
+			age : ${this.empage}<br>
+			salary : ${this.empsal}<br>`);
+}
+}
+var a=new ceo("shriman",19,100000);
+a.info();
+</script>
+</body>
+</html>
+
+==========================================
+refer index.html
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>promise</h3>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+/*
+//let complete=false;
+let prom = (complete)=>{
+return new Promise(function(resolve, reject){
+  document.write("fetching data please wait<br>")
+if(complete){
+resolve("successful <br>");
+}else{
+reject("notsuccessful<br>");
+}
+});
+}
+
+let succ = (result) =>{
+document.write(result);
+}
+
+let unsucc = (error) =>{
+  document.write(error);
+}
+
+prom(false).then(succ);
+prom(false).catch(unsucc);
+console.log(prom(true));
+*/
+/*
+//let complete=false;
+let prom = (complete)=>{
+return new Promise(function(resolve, reject){
+  document.write("fetching data please wait<br>")
+setTimeout(() => {
+  if(complete){
+  resolve("successful <br>");
+  }else{
+  reject("notsuccessful<br>");
+}
+
+},3000)
+});
+}
+
+let succ = (result) =>{
+document.write(result);
+}
+
+let unsucc = (error) =>{
+  document.write(error);
+}
+
+prom(false).then(succ).catch(unsucc);
+console.log(prom(true));
+*/
+/*
+let prom = (complete)=>{
+return new Promise(function(resolve, reject){
+  document.write("fetching data please wait<br>")
+setTimeout(() => {
+  if(complete){
+  resolve("successful <br>");
+  }else{
+  reject("notsuccessful<br>");
+}
+
+},3000)
+});
+}
+
+
+prom(true).then((result) =>{
+document.write(result);
+}).catch((error) =>{
+  document.write(error);
+});
+console.log(prom(true));
+*/
+/*
+let prom = (a,b)=>{
+return new Promise(function(resolve, reject){
+  document.write("fetching data please wait<br>")
+  var c=a/b;
+setTimeout(() => {
+  if(a,b){
+  resolve(`answer : ${c}<br>`);
+  }else{
+  reject(`answer : ${c} : failed <br>`);
+}
+
+},3000)
+});
+}
+
+
+prom(5,5).then((result) =>{
+document.write(result);
+}).catch((error) =>{
+  document.write(error);
+});
+console.log(prom(true));
+*/
+
+let prom = ()=>{
+return new Promise(function(resolve, reject){
+  console.log("fetching data please wait<br>");
+setTimeout(() => {
+$.get("https://jsonplaceholder.typicode.com/posts",function(data){
+  resolve(data);
+}).fail(err =>{
+  reject("failed");
+})
+},3000)
+});
+}
+
+
+prom().then((result) =>{
+console.log(result);
+}).catch((error) =>{
+  console.log(error);
+});
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>promise.all()</h3>
+
+<script>
+/*
+let p1=new Promise((resolve,reject) =>{
+  setTimeout(()=>{
+console.log("first promise has resolved");
+resolve(10);
+},1000);
+});
+
+let p2=new Promise((resolve,reject) =>{
+  setTimeout(()=>{
+console.log("second promise has resolved");
+resolve(20);
+},2000);
+});
+
+let p3=new Promise((resolve,reject) =>{
+  setTimeout(()=>{
+console.log("third promise has r esolved");
+resolve(30);
+},3000);
+});
+var sum=0;
+Promise.all([p1,p2,p3]).then((result)=>{
+  for(var i in result){
+        sum+=result[i];
+  }
+  console.log(`results : ${sum}`);
+}
+).catch((error)=>{
+  console.log(`result : ${error}`);
+});
+*/
+/*
+let p1=new Promise((resolve,reject) =>{
+  setTimeout(()=>{
+console.log("first promise has resolved");
+resolve(10);
+},1000);
+});
+
+let p2=new Promise((resolve,reject) =>{
+  setTimeout(()=>{
+console.log("second promise has failed");
+reject("failed");
+},2000);
+});
+
+let p3=new Promise((resolve,reject) =>{
+  setTimeout(()=>{
+console.log("third promise has r esolved");
+resolve(30);
+},3000);
+});
+
+var sum=0;
+Promise.all([p1,p2,p3]).then((result)=>{
+  for(var i in result){
+        sum+=result[i];
+  }
+  console.log(`results : ${`);
+}
+).catch((error)=>{
+  console.log(`result : ${error}`);
+});
+*/
+
+let promisecall = (returnData,message) => {
+return (resolve,reject)=>{
+  setTimeout(()=>{
+    console.log(` the ${message} promise has resolved`);
+    resolve(returnData);
+  },returnData*100);
+}
+};
+
+let p1 = new Promise(promisecall(10,"first"));
+let p2 = new Promise(promisecall(20,"second"));
+let p3 = new Promise(promisecall(30,"third"));
+let p4 = new Promise(function(resolve, reject){
+  reject("rejected fourth");
+});
+
+
+var sum=0;
+Promise.all([p1,p2,p3,p4]).then((result)=>{
+  for(var i in result){
+        sum+=result[i];
+  }
+  console.log(`results : ${sum}`);
+}
+).catch((error)=>{
+  console.log(`error  : ${error}`);
+});
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>AJAX(asynchronus,javascript,and,XML)</h3>
+<p id="demo">here we load data</p>
+<button onclick="loaddata()">click</button>
+
+
+<script>
+var loaddata = () =>{
+var xhttp= new XMLHttpRequest();
+xhttp.onreadystatechange = function(){
+  if(this.readyState == 4 && this.status == 200){
+    document.getElementById("demo").innerHTML = (this.responseText);
+    console.log(this.responseText);
+  }
+  else if(this.readyState == 4 && this.status == 404){
+    document.getElementById("demo").innerHTML = "file not found";
+
+  }
+};
+
+
+  xhttp.open('GET',"https://jsonplaceholder.typicode.com/posts",true);
+  xhttp.send();
+};
+
+
+
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>fetch()(can do everything what ajex does)
+  method:
+toinsert data to server use "POST"
+to update data to server use "PUT"
+to delete data from server use "DELETE"
+default is "GET" used to read data</h3>
+  body:
+form data,json data,text
+  header:
+'content-type':'application/json',
+if body is form data use this = 'appplication/x-www-form-urlencoded'
+<script>
+/*
+fetch("xyz.txt")
+.then((response)=>{         //.then((response) => return response.text())
+return response.text();
+}).then((data)=>{
+document.write(data);
+}).catch((error)=>{
+console.log(error);
+});
+*/
+
+/*
+//fetching data from online
+fetch("https://jsonplaceholder.typicode.com/users")
+.then((response)=>{         //.then((response) => response.text())
+return response.json();
+}).then((data)=>{
+for(var i in data){
+  document.write(`${data[i].name}:::${data[i].email}:::${data[i].address.city}<br>`);
+}
+
+}).catch((error)=>{
+console.log("failed");
+});
+*/
+
+/*
+ //fetch data from system data
+fetch("student_data.json")
+.then((response)=>{         //.then((response) => response.text())
+return response.json();
+}).then((data)=>{
+for(var i in data){
+  document.write(`${data[i].name}:::${data[i].age}:::${data[i].city}<br>`);
+}
+
+}).catch((error)=>{
+console.log("failed");
+});
+*/
+//to add new data to server
+/*
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  body: JSON.stringify({
+    title: 'foo',
+    body: 'bar',
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));*/
+
+
+//similarly to update and delete..view code in jsonplace holder website
+//:  (https://jsonplaceholder.typicode.com/guide/)
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>continue of previous fetch()</h3>
+<form id="myform">
+  Title<input type="text" id="title"><br><br>
+    Body<input type="text" id="body"><br><br>
+    user id<input type="text" id="userId"><br><br>
+    <input type="submit" id="saveform">
+</form>
+<script>
+if(window.fetch){
+// if browser support fetch then place fetch code here
+}
+else{
+//if browser doesnt support fetch then use ajex code here
+}
+/*
+document.getElementById("saveform").addEventListener("click",function(e){
+  e.preventDefault();
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify({
+      title: document.getElementById("titletext").value,
+      body: document.getElementById("bodytext").value,
+      userId: document.getElementById("userid").value,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+
+});
+*/
+
+/*
+//another method(not worked)
+document.getElementById("saveform").addEventListener("click",function(e){
+  e.preventDefault();
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: new FormData(document.getElementById("myform")),
+    headers: {
+      'Content-type': 'appplication/x-www-form-urlencoded',
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+
+});
+*/
+
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>async(reduce complexities in promise()),await(it will make code execution wait for some time and executes other codes outside the function)  functions</h3>
+
+<script>
+/*
+async function test(){      //or let test=async () =>{}
+  return "hello";
+}
+test().then((result)=>{
+  console.log(`result : ${result}`);
+})
+*/
+/*
+async function test(){
+  console.log("2:hai");
+  await console.log("3:hai");
+  console.log("4:hai");          //prints at last
+
+}
+console.log("1:hai");
+test();
+console.log("5:hai");
+*/
+/*
+async function test(){
+  console.log("2:hai");
+  const response = await fetch("student_data.json");
+  const students = await response.json();
+
+  return students;
+
+}
+console.log("1:hai");
+var a = test();
+console.log("4:hai");
+console.log(a);
+*/
+/*
+async function test(){
+  const response = await fetch("student_data.json");
+  const students = await response.json();
+
+  return students;
+  return ( await fetch("student_data.json");).json();
+}
+
+test().then((res) => {
+console.log(res);
+}).catch((err) => {
+console.log(`error : ${err}`);
+});
+*/
+/*
+//same as above but short code
+async function test(){
+return (await fetch("student_data.json")).json();
+}
+
+test().then((res) => {
+console.log(res);
+}).catch((err) => {
+console.log(`error : ${err}`);
+});
+*/
+
+async function test(){
+  try{
+
+      const response = await fetch("student_data.json");
+      const students = await response.json();
+
+      return students;
+  }catch(error){
+console.log("error")
+  }
+
+}
+
+test().then((res) => {
+console.log(res);
+});
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>symbol(new datatype)</h3>
+
+<script>
+/*
+var x=Symbol("hai");
+var y=Symbol("hai");
+document.write(x.toString()+"<br>"+x.description);
+console.log(x);
+console.log(typeof x);
+console.log(x!=y);    //true => not same
+*/
+/*
+let age=Symbol("age");
+let user={
+  name : "shriman",
+  class : "14th",
+  [age] : 25
+};
+
+console.log(user);
+*/
+
+let age=Symbol("age");
+let user={
+  name : "shriman",
+  class : "14th",
+};
+user[age]=25;
+user["gender"] = "male";
+console.log(user.name);
+console.log(user[age]);
+
+for(key in user){         //symbol cant be printed using for loop
+  console.log(key);
+}
+console.log(user);
+console.log(JSON.stringify(user));      //will skip symbol form of data
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>iterators</h3>
+
+<script>
+	/*
+var x=["green","red","orange"];
+let y=x[Symbol.iterator]();
+console.log(typeof y);
+(y.next());		//if dont want to print
+console.log(y.next());
+console.log(y.next().value);				//direct returns value
+console.log(y.next());	//undefined | done:true
+*/
+/*
+var x=["green","red","orange"];
+let y=x[Symbol.iterator]();
+var res = y.next();
+while(!res.done){
+	console.log(res.value);
+	res = y.next();
+}
+*/
+/*
+var x="shriman";
+let y=x[Symbol.iterator]();
+let res=y.next();
+while(!res.done){
+	console.log(res.value);
+	res=y.next();
+}
+*/
+/*
+var x="shriman";
+for(let i of x){
+	console.log(i);
+}
+*/
+
+//creat our own iterator
+var x=["green","red","orange"];
+let y=numite(x);
+
+console.log(y.next());
+(y.next());			//if dont want to print second one
+console.log(y.next().value);
+console.log(y.next());
+
+function numite(arr){
+var nextnum = 0;
+return {
+	next(){
+		if(nextnum < arr.length){
+			return {
+			value : arr[nextnum++],
+			done : false
+		}
+		}
+		else{
+			return {
+			value : arr[nextnum++],
+			done : true
+		}
+		}
+	}
+}
+}
+
+
+</script>
+</body>
+</html>
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>generators</h3>
+
+<script>
+	/*
+function *gen(){
+	console.log("hai");
+	yield "first";
+	yield "second";
+	yield "third";
+	console.log("bai");
+}
+
+let g= gen();
+
+console.log(g.next());
+console.log(g.next());
+(g.next());
+console.log(g.next());
+//OR
+for(var i of g){
+	console.log(i);
+}
+*/
+/*
+function *gen(){
+	var num=10;
+	while(true){
+		yield(num++);
+	}
+}
+var g=gen();
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+//OR
+for(let i of g){
+	if(i>20) break;
+	console.log(i);
+}
+*/
+/*
+function *gen(){
+	let result= (yield)*10;
+	console.log(result);
+}
+let g=gen();
+g.next();
+g.next(23);
+g.next(230);	//doesnt display since it displays first one only since we have only yield in function
+*/
+/*
+function *gen(){
+	let result= [yield,yield,yield,yield];
+	console.log(result);		//result[2] : to view only 1 value
+}
+let g=gen();
+g.next();
+g.next("hai");
+g.next(true);
+g.next(2300);
+g.next("bai");
+*/
+/*
+function *gen(){
+	yield 55;
+	yield* ["A","B","C","D"];	//* is used to separate all ele
+}
+let g=gen();
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+*/
+/*
+function *gen(){
+	yield 55;
+	yield 12;
+	yield 35;
+	yield 56;	//* is used to separate all ele
+}
+let g=gen();
+console.log(g.next().value);
+console.log([...g]);		//spread operator : make remaining to one array
+*/
+
+function *gen(){
+	yield 55;
+	yield 12;
+	yield 35;
+	yield 56;	//* is used to separate all ele
+}
+let g=gen();
+console.log(g.next().value);
+console.log(g.next().value);
+console.log(g.return("the end"));	//nothing prints after this
+console.log(g.next().value);		//will notbe printed
+
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>strict mode</h3>
+
+<script>
+	"use strict";		//used to get error for all mistakes
+var a=10;
+console.log(a);
+
+function sum(a,b,b){		//error...duplicate parameter
+	console.log(a+b+b)
+}
+test(10,20,30);
+</script>
+</body>
+</html>
+
+==========================================
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+<head>
+<title>my page</title>
+<style>
+
+</style>
+</head>
+<body>
+<h3>error handling(try and catch)
+	types of error
+	eval error: when eval is used
+	range error:when range is used
+	reference e: if something is not defined
+	syntax e: due to wrong syntax
+	type e: if other types is used which is not in JS
+	urlie : if url gives type is not correct
+	aggregate : comes in promise
+</h3>
+
+<script>
+	/*
+	try{
+console.log('start');
+blabla;				//control goes to catch since it is a error
+console.log('end');
+
+	}catch(error){
+console.log(error);
+	}
+*/
+
+/*
+setTimeout(function(){	//works fine
+try{
+blabla;
+
+	}catch(error){
+console.log(error);
+	}
+})
+*/
+/*
+try{
+console.log('start');
+blabla;				//control goes to catch since it is a error
+console.log('end');
+
+	}catch(error){
+			if(error instanceof ReferenceError){
+				console.log("reference error");
+			}
+			else if(error instanceof TypeError){
+				console.log("type error");
+			}
+			else{
+				console.log("unknown error");
+
+			}
+	}
+*/
+// when we use JSON from server
+try{
+console.log('start');
+let json = '{"age":19}'		//control goes to catch since it is a error
+
+let user = JSON.parse(json);		//parse : convert json to JS (its ulta is stringify)
+
+
+if(!user.name){
+throw new Error("name not recieved");
+}
+
+console.log(user.name);
+console.log(user.age);
+console.log('end');
+
+
+	}catch(error){
+		console.log(error);
+
+	}finally{		//not mandatory..it is executed irrespective of error is there or not there
+		console.log('done');
+	}
+
+
+
+
+</script>
+</body>
+</html>
+
+==========================================
+
